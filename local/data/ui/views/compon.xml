@@ -1,0 +1,79 @@
+<view autoCancelInterval="90" isVisible="true" onunloadCancelJobs="true" template="dashboard.html" >
+  <!--  autoCancelInterval is set here to 100  -->
+  <label>ThugEvents:rename</label>
+  <module name="AccountBar" layoutPanel="appHeader"/>
+  <module name="AppBar" layoutPanel="navigationHeader"/>
+  <module name="Message" layoutPanel="messaging">
+    <param name="filter">*</param>
+    <param name="clearOnJobDispatch">False</param>
+    <param name="maxSize">1</param>
+  </module>
+  
+  <module name="TimeRangePicker" layoutPanel="panel_row2_col1">
+    <module name="StaticContentSample" layoutPanel="panel_row2_col1" >
+      <param name="text">
+        <![CDATA[ Here is an example where clicking on one of the top 10 recent sourcetypes by volume indexed,
+        shows you a timechart of avg(eps) for that particular sourcetype over the same period. ]]>
+      </param>
+    </module>
+    <param name="default">last_24_hours</param>
+    <param name="searchWhenChanged">true</param>
+    
+    
+   <!-- <module name="HiddenSearch" layoutPanel="panel_row3_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+        <param name="search">index=cuckoo_dnsinfo | geoip dnsinfo_ip | strcat dnsinfo_hostname &quot;@&quot; dnsinfo_ip &quot;@&quot; dnsinfo_ip_country_code dnsinfo | stats values(dnsinfo_hostname) as hostname, values(dnsinfo) as dnsinfo  by md5 </param>
+	<module name="dfs"></module>
+    </module>
+-->
+    <module name="HiddenSearch" layoutPanel="panel_row3_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=0  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row3_col2" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=1  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs2"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row4_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=2  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs3"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row4_col2" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=3  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs4"></module>
+    </module>
+
+     <module name="HiddenSearch" layoutPanel="panel_row5_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=4  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs5"></module>
+    </module>
+
+     <module name="HiddenSearch" layoutPanel="panel_row5_col2" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=5  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs6"></module>
+    </module>
+
+     <module name="HiddenSearch" layoutPanel="panel_row6_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=6  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs7"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row6_col2" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=7  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs8"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row7_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=8  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs9"></module>
+    </module>
+
+    <module name="HiddenSearch" layoutPanel="panel_row7_col2" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">sourcetype=sublink |search subid=9  | strcat sourcenode &quot;@&quot; target combinelink | stats values(combinelink) by subid </param>
+     <module name="dfs10"></module>
+    </module>
+
+  </module>
+</view>

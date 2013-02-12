@@ -1,0 +1,4590 @@
+{
+    "info": {
+        "started": "2012-08-19 15:29:44", 
+        "ended": "2012-08-19 15:32:31", 
+        "duration": "166 seconds", 
+        "version": "0.4-dev"
+    }, 
+    "yara": [], 
+    "signatures": [], 
+    "behavior": {
+        "processes": [
+            {
+                "parent_id": "1024", 
+                "process_name": "1238d4813888013c0ef140bb75e5eb84", 
+                "process_id": "1100", 
+                "first_seen": "20120819073016.792", 
+                "calls": [
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00ca0000", 
+                        "timestamp": "20120819073016.792", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "38046"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cb0000", 
+                        "timestamp": "20120819073016.902", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "2063914"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00eb0000", 
+                        "timestamp": "20120819073016.902", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1031958"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x010b0000", 
+                        "timestamp": "20120819073016.902", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1031958"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "QueryAdapterName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableAdapterDomainName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseDomainNameDevolution"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseDomainNameDevolution"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "PrioritizeRecordData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "PrioritizeRecordData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AllowUnqualifiedQuery"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AllowUnqualifiedQuery"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AppendToMultiLabelName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ScreenBadTlds"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ScreenUnreachableServers"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "FilterClusterIp"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "WaitForNameErrorOnAll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseEdns"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "QueryIpMatching"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseHostsFile"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationEnabled"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableDynamicUpdate"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterPrimaryName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterAdapterName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "EnableAdapterDomainNameRegistration"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterReverseLookup"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableReverseAddressRegistrations"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterWanAdapters"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableWanDynamicUpdate"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DefaultRegistrationTTL"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationRefreshInterval"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DefaultRegistrationRefreshInterval"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationMaxAddressCount"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxNumberOfAddressesToRegister"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateSecurityLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateSecurityLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateZoneExcludeFile"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateTopLevelDomainZones"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DnsTest"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCacheSize"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCacheTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxNegativeCacheTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AdapterTimeoutLimit"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ServerPriorityTimeLimit"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCachedSockets"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MulticastListenLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MulticastSendLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x000000a0"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "SystemSetupInProgress"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000a8", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "\\\\.\\Ip"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_EXECUTE"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.942", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cc0000", 
+                        "timestamp": "20120819073016.952", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1100"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00cc0000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "1"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "0x000001a4", 
+                        "timestamp": "20120819073016.962", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\1238d4813888013c0ef140bb75e5eb84"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819073016.962", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x000001a4"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "4096"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819073016.962", 
+                        "repeated": 144, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x000001a4"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "512"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819073016.962", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "c:\\cgvi5r6i\\vgdgfd.72g"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ], 
+        "processtree": [
+            {
+                "pid": 1100, 
+                "name": "1238d4813888013c0ef140bb75e5eb84", 
+                "children": []
+            }
+        ], 
+        "summary": {
+            "files": [
+                "\\\\.\\Ip", 
+                "C:\\1238d4813888013c0ef140bb75e5eb84", 
+                "c:\\cgvi5r6i\\vgdgfd.72g"
+            ], 
+            "keys": [], 
+            "mutexes": []
+        }
+    }, 
+    "virustotal": {
+        "scan_id": "b43f6be6e3297eb23d1f753b2021610e38ade58255da6c5cba65642097cc81c1-1344123757", 
+        "sha1": "cf0c566987d119a0bde33b86b8cd34c9943fa2b0", 
+        "resource": "1238d4813888013c0ef140bb75e5eb84", 
+        "response_code": 1, 
+        "scan_date": "2012-08-04 23:42:37", 
+        "permalink": "https://www.virustotal.com/file/b43f6be6e3297eb23d1f753b2021610e38ade58255da6c5cba65642097cc81c1/analysis/1344123757/", 
+        "verbose_msg": "Scan finished, scan information embedded in this object", 
+        "sha256": "b43f6be6e3297eb23d1f753b2021610e38ade58255da6c5cba65642097cc81c1", 
+        "positives": 7, 
+        "total": 40, 
+        "md5": "1238d4813888013c0ef140bb75e5eb84", 
+        "scans": {
+            "nProtect": {
+                "detected": false, 
+                "version": "2012-08-03.01", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "CAT-QuickHeal": {
+                "detected": false, 
+                "version": "12.00", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "McAfee": {
+                "detected": false, 
+                "version": "5.400.0.1158", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "TheHacker": {
+                "detected": false, 
+                "version": "None", 
+                "result": null, 
+                "update": "20120801"
+            }, 
+            "K7AntiVirus": {
+                "detected": false, 
+                "version": "9.145.7426", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "VirusBuster": {
+                "detected": false, 
+                "version": "15.0.128.0", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "F-Prot": {
+                "detected": false, 
+                "version": "4.6.5.141", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Symantec": {
+                "detected": false, 
+                "version": "20121.1.0.298", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Norman": {
+                "detected": false, 
+                "version": "6.08.06", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "TotalDefense": {
+                "detected": false, 
+                "version": "37.0.10013", 
+                "result": null, 
+                "update": "20120802"
+            }, 
+            "TrendMicro-HouseCall": {
+                "detected": false, 
+                "version": "9.500.0.1008", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Avast": {
+                "detected": false, 
+                "version": "6.0.1289.0", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "ClamAV": {
+                "detected": false, 
+                "version": "0.97.3.0", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Kaspersky": {
+                "detected": false, 
+                "version": "9.0.0.837", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "BitDefender": {
+                "detected": true, 
+                "version": "7.2", 
+                "result": "Gen:Variant.Kazy.82848", 
+                "update": "20120803"
+            }, 
+            "SUPERAntiSpyware": {
+                "detected": false, 
+                "version": "4.40.0.1006", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Emsisoft": {
+                "detected": false, 
+                "version": "5.1.0.11", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Comodo": {
+                "detected": false, 
+                "version": "13137", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "F-Secure": {
+                "detected": true, 
+                "version": "9.0.16440.0", 
+                "result": "Gen:Variant.Kazy.82848", 
+                "update": "20120803"
+            }, 
+            "DrWeb": {
+                "detected": false, 
+                "version": "7.0.2.04281", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "VIPRE": {
+                "detected": false, 
+                "version": "12478", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "AntiVir": {
+                "detected": true, 
+                "version": "7.11.38.196", 
+                "result": "TR/Crypt.XPACK.Gen", 
+                "update": "20120803"
+            }, 
+            "TrendMicro": {
+                "detected": false, 
+                "version": "9.561.0.1027", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "McAfee-GW-Edition": {
+                "detected": false, 
+                "version": "2012.1", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Sophos": {
+                "detected": true, 
+                "version": "4.79.0", 
+                "result": "Mal/EncpkLEE-B", 
+                "update": "20120803"
+            }, 
+            "Jiangmin": {
+                "detected": false, 
+                "version": "13.0.900", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Antiy-AVL": {
+                "detected": false, 
+                "version": "2.0.3.7", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Microsoft": {
+                "detected": false, 
+                "version": "1.8601", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "ViRobot": {
+                "detected": false, 
+                "version": "2011.4.7.4223", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "AhnLab-V3": {
+                "detected": false, 
+                "version": "2012.08.04.00", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "GData": {
+                "detected": true, 
+                "version": "22", 
+                "result": "Gen:Variant.Kazy.82848", 
+                "update": "20120803"
+            }, 
+            "Commtouch": {
+                "detected": false, 
+                "version": "5.3.2.6", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "ByteHero": {
+                "detected": false, 
+                "version": "1.0.0.1", 
+                "result": null, 
+                "update": "20120723"
+            }, 
+            "VBA32": {
+                "detected": false, 
+                "version": "3.12.18.2", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "ESET-NOD32": {
+                "detected": false, 
+                "version": "7353", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Rising": {
+                "detected": false, 
+                "version": "24.21.03.03", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Ikarus": {
+                "detected": false, 
+                "version": "T3.1.1.122.0", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Fortinet": {
+                "detected": true, 
+                "version": "4.3.398.0", 
+                "result": "W32/Krap.A!tr", 
+                "update": "20120803"
+            }, 
+            "AVG": {
+                "detected": false, 
+                "version": "10.0.0.1190", 
+                "result": null, 
+                "update": "20120803"
+            }, 
+            "Panda": {
+                "detected": true, 
+                "version": "10.0.3.5", 
+                "result": "Suspicious file", 
+                "update": "20120803"
+            }
+        }
+    }, 
+    "static": {
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "SetupQueryInfFileInformationW", 
+                        "address": "0x4dc290"
+                    }, 
+                    {
+                        "name": "SetupAddSectionToDiskSpaceListA", 
+                        "address": "0x4dc294"
+                    }, 
+                    {
+                        "name": "SetupDiGetDriverInfoDetailW", 
+                        "address": "0x4dc298"
+                    }, 
+                    {
+                        "name": "SetupDiGetDeviceRegistryPropertyA", 
+                        "address": "0x4dc29c"
+                    }, 
+                    {
+                        "name": "SetupGetLineByIndexW", 
+                        "address": "0x4dc2a0"
+                    }, 
+                    {
+                        "name": "SetupOpenFileQueue", 
+                        "address": "0x4dc2a4"
+                    }, 
+                    {
+                        "name": "SetupCloseLog", 
+                        "address": "0x4dc2a8"
+                    }, 
+                    {
+                        "name": "SetupGetFieldCount", 
+                        "address": "0x4dc2ac"
+                    }, 
+                    {
+                        "name": "SetupDiDestroyDriverInfoList", 
+                        "address": "0x4dc2b0"
+                    }, 
+                    {
+                        "name": "CMP_WaitNoPendingInstallEvents", 
+                        "address": "0x4dc2b4"
+                    }, 
+                    {
+                        "name": "SetupGetSourceInfoW", 
+                        "address": "0x4dc2b8"
+                    }
+                ], 
+                "dll": "SETUPAPI.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "NetUserGetLocalGroups", 
+                        "address": "0x4dc2c0"
+                    }, 
+                    {
+                        "name": "NetRegisterDomainNameChangeNotification", 
+                        "address": "0x4dc2c4"
+                    }, 
+                    {
+                        "name": "NetGroupDelUser", 
+                        "address": "0x4dc2c8"
+                    }, 
+                    {
+                        "name": "NetApiBufferFree", 
+                        "address": "0x4dc2cc"
+                    }, 
+                    {
+                        "name": "NetValidateName", 
+                        "address": "0x4dc2d0"
+                    }, 
+                    {
+                        "name": "Netbios", 
+                        "address": "0x4dc2d4"
+                    }, 
+                    {
+                        "name": "NetLocalGroupSetInfo", 
+                        "address": "0x4dc2d8"
+                    }, 
+                    {
+                        "name": "NetQueryDisplayInformation", 
+                        "address": "0x4dc2dc"
+                    }, 
+                    {
+                        "name": "NetUseEnum", 
+                        "address": "0x4dc2e0"
+                    }, 
+                    {
+                        "name": "NetUserGetGroups", 
+                        "address": "0x4dc2e4"
+                    }, 
+                    {
+                        "name": "NetGroupAddUser", 
+                        "address": "0x4dc2e8"
+                    }, 
+                    {
+                        "name": "NetLocalGroupDelMembers", 
+                        "address": "0x4dc2ec"
+                    }, 
+                    {
+                        "name": "NetGroupEnum", 
+                        "address": "0x4dc2f0"
+                    }, 
+                    {
+                        "name": "NetStatisticsGet", 
+                        "address": "0x4dc2f4"
+                    }, 
+                    {
+                        "name": "NetShareSetInfo", 
+                        "address": "0x4dc2f8"
+                    }, 
+                    {
+                        "name": "NetLocalGroupGetMembers", 
+                        "address": "0x4dc2fc"
+                    }, 
+                    {
+                        "name": "NetGetJoinInformation", 
+                        "address": "0x4dc300"
+                    }, 
+                    {
+                        "name": "NetUserModalsSet", 
+                        "address": "0x4dc304"
+                    }, 
+                    {
+                        "name": "NetGroupGetUsers", 
+                        "address": "0x4dc308"
+                    }, 
+                    {
+                        "name": "NetUseDel", 
+                        "address": "0x4dc30c"
+                    }, 
+                    {
+                        "name": "NetUserSetInfo", 
+                        "address": "0x4dc310"
+                    }, 
+                    {
+                        "name": "NetShareDelSticky", 
+                        "address": "0x4dc314"
+                    }, 
+                    {
+                        "name": "NetUseGetInfo", 
+                        "address": "0x4dc318"
+                    }, 
+                    {
+                        "name": "NetUserEnum", 
+                        "address": "0x4dc31c"
+                    }, 
+                    {
+                        "name": "NetLocalGroupAdd", 
+                        "address": "0x4dc320"
+                    }, 
+                    {
+                        "name": "NetServerGetInfo", 
+                        "address": "0x4dc324"
+                    }, 
+                    {
+                        "name": "DsRoleGetPrimaryDomainInformation", 
+                        "address": "0x4dc328"
+                    }, 
+                    {
+                        "name": "DsGetDcNameWithAccountW", 
+                        "address": "0x4dc32c"
+                    }, 
+                    {
+                        "name": "NetShareCheck", 
+                        "address": "0x4dc330"
+                    }
+                ], 
+                "dll": "NETAPI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "SetConsoleCursorInfo", 
+                        "address": "0x4dc338"
+                    }, 
+                    {
+                        "name": "VirtualAlloc", 
+                        "address": "0x4dc33c"
+                    }, 
+                    {
+                        "name": "SetThreadAffinityMask", 
+                        "address": "0x4dc340"
+                    }, 
+                    {
+                        "name": "GetPrivateProfileIntW", 
+                        "address": "0x4dc344"
+                    }, 
+                    {
+                        "name": "ReadProcessMemory", 
+                        "address": "0x4dc348"
+                    }, 
+                    {
+                        "name": "GetProcessTimes", 
+                        "address": "0x4dc34c"
+                    }, 
+                    {
+                        "name": "QueueUserWorkItem", 
+                        "address": "0x4dc350"
+                    }, 
+                    {
+                        "name": "GetStringTypeW", 
+                        "address": "0x4dc354"
+                    }, 
+                    {
+                        "name": "AssignProcessToJobObject", 
+                        "address": "0x4dc358"
+                    }, 
+                    {
+                        "name": "GetVDMCurrentDirectories", 
+                        "address": "0x4dc35c"
+                    }, 
+                    {
+                        "name": "ReadConsoleOutputW", 
+                        "address": "0x4dc360"
+                    }, 
+                    {
+                        "name": "CreateMutexW", 
+                        "address": "0x4dc364"
+                    }, 
+                    {
+                        "name": "_lclose", 
+                        "address": "0x4dc368"
+                    }, 
+                    {
+                        "name": "WaitForMultipleObjects", 
+                        "address": "0x4dc36c"
+                    }, 
+                    {
+                        "name": "GetEnvironmentStringsW", 
+                        "address": "0x4dc370"
+                    }, 
+                    {
+                        "name": "GetSystemInfo", 
+                        "address": "0x4dc374"
+                    }, 
+                    {
+                        "name": "Process32FirstW", 
+                        "address": "0x4dc378"
+                    }, 
+                    {
+                        "name": "HeapAlloc", 
+                        "address": "0x4dc37c"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x4dc380"
+                    }, 
+                    {
+                        "name": "WaitForSingleObjectEx", 
+                        "address": "0x4dc384"
+                    }, 
+                    {
+                        "name": "SetEnvironmentVariableW", 
+                        "address": "0x4dc388"
+                    }, 
+                    {
+                        "name": "GetDriveTypeW", 
+                        "address": "0x4dc38c"
+                    }, 
+                    {
+                        "name": "PulseEvent", 
+                        "address": "0x4dc390"
+                    }, 
+                    {
+                        "name": "CreateFileW", 
+                        "address": "0x4dc394"
+                    }, 
+                    {
+                        "name": "GetCurrencyFormatW", 
+                        "address": "0x4dc398"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "pe_exports": [], 
+        "imported_dll_count": 3, 
+        "pe_resources": [], 
+        "pe_versioninfo": [], 
+        "pe_sections": [
+            {
+                "size_of_data": "0xdb400", 
+                "virtual_address": "0x1000", 
+                "entropy": 5.07552246177844, 
+                "name": ".bss\\x00\\x00\\x00\\x00", 
+                "virtual_size": "0xdb3a8"
+            }, 
+            {
+                "size_of_data": "0xcc00", 
+                "virtual_address": "0xdd000", 
+                "entropy": 6.0305767629047065, 
+                "name": ".text\\x00\\x00\\x00", 
+                "virtual_size": "0xc9f8"
+            }, 
+            {
+                "size_of_data": "0xdc00", 
+                "virtual_address": "0xea000", 
+                "entropy": 2.190249455621769, 
+                "name": ".rsrc\\x00\\x00\\x00", 
+                "virtual_size": "0xda94"
+            }, 
+            {
+                "size_of_data": "0x400", 
+                "virtual_address": "0xf8000", 
+                "entropy": 0.14775794832254674, 
+                "name": ".reloc\\x00\\x00", 
+                "virtual_size": "0x18"
+            }
+        ]
+    }, 
+    "dropped": [], 
+    "file": {
+        "size": 1008648, 
+        "sha1": "cf0c566987d119a0bde33b86b8cd34c9943fa2b0", 
+        "name": "1238d4813888013c0ef140bb75e5eb84", 
+        "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit", 
+        "crc32": "8F6AE78C", 
+        "ssdeep": null, 
+        "sha256": "b43f6be6e3297eb23d1f753b2021610e38ade58255da6c5cba65642097cc81c1", 
+        "sha512": "4b21e117765cc565eb08cb6c688863d6b18fcda21c0878e4a5c34ba55a2bafa42371f3436f56d8078b7dd93260899be4f64bf489cc73f18025b80396fffe9b25", 
+        "md5": "1238d4813888013c0ef140bb75e5eb84"
+    }, 
+    "debug": {
+        "log": "2012-08-19 09:30:12,746 [root] INFO: No analysis package specified, trying to detect it automagically\r\n2012-08-19 09:30:12,756 [lib.api.process] INFO: Successfully executed process from path \"C:\\1238d4813888013c0ef140bb75e5eb84\" with arguments \"None\" with pid 1100\r\n2012-08-19 09:30:14,769 [lib.api.process] INFO: Using QueueUserAPC injection\r\n2012-08-19 09:30:14,769 [lib.api.process] INFO: Successfully injected process with pid 1100\r\n2012-08-19 09:30:16,772 [lib.api.process] INFO: Successfully resumed process with pid 1100\r\n2012-08-19 09:30:16,772 [root] INFO: Added new process to list with pid: 1100\r\n2012-08-19 09:32:13,650 [root] INFO: Analysis completed\r\n"
+    }, 
+    "network": {
+        "http": [], 
+        "udp": [
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }
+        ], 
+        "hosts": [
+            "192.168.56.101", 
+            "192.168.56.1", 
+            "239.255.255.250", 
+            "224.0.0.22", 
+            "192.168.56.255"
+        ], 
+        "dns": [], 
+        "tcp": []
+    }
+}

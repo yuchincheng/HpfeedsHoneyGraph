@@ -1,0 +1,63 @@
+<dashboard>
+  
+  <label>Requirements and Installation</label>
+
+
+  <!-- First row of a single comment -->
+  <row>
+
+    <!-- Static content, remove upon editing-->
+    <html>
+      <h1>Welcome to HPFeedsHoneyGraph app! </h1>
+      <h2>This solunk app is develped for visualizing and analyzing HpFeeds logs.</h2>
+      <h2>This project is initialized and accepted by Google Summer of Code 2012, mentoring under The Honeynet Project. </h2>
+      
+      <h1>Installation:</h1>
+      <ul>
+          <li>Install <b>xmlutils</b> splunk app from SplunkBase.</li>
+          <li>Insatll <b>Geo Location Lookup Script (powered by MAXMIND)</b> splunk app from SplunkBase</li>
+          <li>In order to play ffdomainip (external python scripts) to resolving fast-fluxing IPs once we got malicious hostname from cuckoo report.
+              Please install <b>python-lxml, pygeoip, dnspython</b> three python modules.
+          </li>
+      </ul>
+      
+      <h1>File Lists:</h1>
+        <ul>{$SPLUNK_APP}/bin/cuckoo_instancd.py : Extracting md5, dnsinfo infomation and indexing</ul>
+       
+       <h1>Note: </h1>
+       <p>* Please be careful to run <b>savedSearch=cuckoo_run_ffdomainip</b> through your nav to <b>searches</b> tabs.
+            This savedSearch will resolved hostname to find IPs using Passive DNS replication website and pffdetect modules.
+            It will take a long long long time and comsume splunk resouces to detect and adjust fast-fluxing IPs.
+            Please consider to run this savedSearch once per week by scheduling. 
+       </p>
+       <p>
+        
+       </p>
+    </html>
+  <!-- End of static content -->
+
+  </row>
+  
+  
+  <!-- Second row of 2 panels -->
+  <row>
+    <chart>
+      <searchName>Top recipients - pie chart</searchName>
+      <title>Top recipients</title>
+    </chart>
+
+    <chart>
+      <searchName>Top recipients by mailer - area chart</searchName>
+      <title>Top recipients by mailer</title>
+    </chart>
+    
+  </row>
+  
+  <row>
+    <event>
+      <searchName>Sendmail transactions</searchName>
+      <title>Sendmail transactions</title>
+    </event>
+  </row>
+
+</dashboard>

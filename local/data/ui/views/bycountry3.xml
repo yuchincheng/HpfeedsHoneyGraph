@@ -1,0 +1,174 @@
+<view autoCancelInterval="100" isPersistable="true" isSticky="true" isVisible="true" objectMode="viewconf" onunloadCancelJobs="false" template="dashboard.html">
+  <!--  autoCancelInterval is set here to 100  -->
+  <label>MalObjects: By Country</label>
+  <module name="AccountBar" layoutPanel="appHeader"/>
+  <module name="AppBar" layoutPanel="navigationHeader"/>
+  <module name="Message" layoutPanel="messaging">
+    <param name="filter">*</param>
+    <param name="clearOnJobDispatch">False</param>
+    <param name="maxSize">3</param>
+  </module>
+  <module name="TitleBar" layoutPanel="viewHeader">
+    <param name="actionsMenuFilter">dashboard</param>
+  </module>
+
+  <module name="StaticContentSample" layoutPanel="panel_row1_col1">
+    <param name="text"><![CDATA[
+    This graph displays malicous objects by selected ccountry.
+    Malicious objects includes <b>malicious sites</b> hosted malicious pages or malwares, <b>malicious hostnames</b> extracted
+    from malware samples using cuckoo sandboxing, and <b>resolved IPs</b> (usually fast-fluxing IPs) detected using fast-flux detection module and passive DNS replication for
+    malicious hostnames. 
+    ]]></param>
+  </module>
+  
+  <module name="TimeRangePicker" layoutPanel="panel_row1_col1"  autorun="True">
+    <param name="selected">Last 7 days</param>
+    <param name="searchWhenChanged">True</param> 
+      
+    <module name="SearchSelectLister" autorun="True">
+      <param name="settingToCreate">countrycode_setting</param>
+      <param name="search">index=thug_files_logs | geoip | rename geoip_country_code  as countrycode| dedup countrycode</param>
+      <!--<param name="earliest">-7d</param> -->
+      <param name="label">Select Country:</param>
+      <!--<param name="applyOuterIntentionsToInternalSearch">True</param> -->
+      <param name="applyOuterTimeRangeToInternalSearch">True</param>
+      <param name="applyOuterIntentionsToInternalSearch">True</param>
+      <param name="searchFieldsToDisplay">
+        <list>
+          <param name="label">countrycode</param>
+          <param name="value">countrycode</param>
+        </list>
+      </param>
+        
+      <module name="ConvertToIntention">
+        <param name="settingToConvert">countrycode_setting</param>
+        <param name="intention">
+          <param name="name">stringreplace</param>
+          <param name="arg">
+            <param name="countrycode">
+             	 <param name="default">US</param>
+		 <param name="value">$target$</param>
+            </param>
+          </param>
+                <!-- tells the addterm intention to put our term in the first search clause no matter what. -->
+          <param name="flags"><list>indexed</list></param>
+        </param>
+          
+        <module name="SubmitButton" autorun="True">
+          <param name="allowSoftSubmit">True</param>
+          <param name="label">Starting</param>
+            
+          <module name="Message" >
+            <param name="filter">splunk.search.job</param>
+            <param name="clearOnJobDispatch">True</param>
+            <param name="maxSize">5</param>
+            
+            <module name="GenericHeader" layoutPanel="panel_row4_col1">
+              <param name="label">Malicious Objects on country</param>
+            </module>
+             
+	    <module name="HiddenSearch" layoutPanel="panel_row4_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="search">index=cuckoo_dnsinfo OR index=thug_files_logs  | lookup dnsLookup host as sitehost OUTPUT ip as dnsinfo_ip_website| eval H1=dnsinfo_ip_website+&quot;@@@&quot;+url+&quot;@@@&quot;+md5 | inputlookup append=t ffdnsip2 | eval H2=md5+&quot;@@@&quot;+ dnsinfo_hostname+&quot;@@@&quot;+dnsinfo_ip | eval objects=coalesce(dnsinfo_ip, dnsinfo_ip_website) | geoip objects | search objects_country_code=$countrycode$ | stats values(H1), values(H2) by objects</param>
+     <module name="treecountry"></module>
+    </module> 
+              
+            <module name="GenericHeader" layoutPanel="panel_row1_col1" >
+              <param name="label">Malious object count over time</param>
+            </module>
+                  
+            <module name="HiddenSearch" layoutPanel="panel_row1_col1">
+              <param name="search">`thugfiles_geoip` | search geoip_country_code=$countrycode$ | timechart distinct_count(geoip) by geoip</param>
+              <module name="HiddenChartFormatter">
+                <param name="charting.chart">column</param>
+                <param name="charting.primaryAxisTitle.text">Timeline</param>
+                <param name="charting.secondaryAxisTitle.text">Count(Mal-Objects)</param>
+                <param name="charting.legend.placement">top</param>
+                <module name="JobProgressIndicator"/>
+                <module name="FlashChart">
+                  <param name="width">100%</param>
+                  <param name="height">200px</param>
+                </module>
+              </module>
+            </module>
+            
+            <module name="HiddenSearch" group="Malicious websites lists:" layoutPanel="panel_row2_col1">
+                <param name="search">`thugfiles_geoip` | search geoip_country_code=$countrycode$ | convert timeformat="%D" ctime(_time) AS timestamp |
+                stats first(timestamp) as last_seen, values(url) as malicious_site, count(url), values(md5) as malware_samples by geoip | sort -last_seen
+                </param>
+                <module name="ResultsHeader">
+                  <param name="entityLabel">results</param>
+                  <param name="entityName">results</param>
+                  <module name="Paginator">
+                    <param name="count">4</param>
+                    <param name="entityName">results</param>
+                    <param name="maxPages">8</param>
+                    <module name="SimpleResultsTable">
+                      <param name="drilldown">all</param>
+                      <param name="entityName">results</param>
+                      <module name="ConvertToDrilldownSearch">
+                        <module name="Paginator" layoutPanel="panel_row2_col2">
+                          <param name="count">4</param>
+                          <param name="entityName">events</param>
+                          <param name="maxPages">8</param>
+                          <module name="JobProgressIndicator"></module>
+                          <module name="SimpleResultsHeader">
+                            <param name="entityName">events</param>
+                            <param name="headerFormat">$time$ : Found $count$ events </param>
+                          </module>
+                          <module name="EventsViewer"  >
+                            <param name="segmentation">inner</param>
+                            <param name="count">3</param>
+                            <param name="reportFieldLink">report_builder_format_report</param>
+                            <param name="maxLines">3</param>
+                            <param name="entityName">results_preview</param>
+                          </module>
+                        </module>
+                      </module>
+                    </module>
+                  </module>
+                </module>
+              </module>
+            <module name="HiddenSearch" group="Malicious hostname list:" layoutPanel="panel_row3_col1">
+                <param name="search">index=cuckoo_dnsinfo OR index=thug_files_logs | geoip | search geoip_country_code=$countrycode$ | inputlookup append=t ffdnsip2 | stats values(dnsinfo_ip) as resolved_IP, values(md5) as malware_samples by dnsinfo_hostname | rename dnsinfo_hostname as malicious_hostname
+                </param>
+                <module name="ResultsHeader">
+                  <param name="entityLabel">results</param>
+                  <param name="entityName">results</param>
+                  <module name="Paginator">
+                    <param name="count">4</param>
+                    <param name="entityName">results</param>
+                    <param name="maxPages">8</param>
+                    <module name="SimpleResultsTable">
+                      <param name="drilldown">all</param>
+                      <param name="entityName">results</param>
+                      <module name="ConvertToDrilldownSearch">
+                        <module name="Paginator" layoutPanel="panel_row3_col2">
+                          <param name="count">4</param>
+                          <param name="entityName">events</param>
+                          <param name="maxPages">8</param>
+                          <module name="JobProgressIndicator"></module>
+                          <module name="SimpleResultsHeader">
+                            <param name="entityName">events</param>
+                            <param name="headerFormat">$time$ : Found $count$ events </param>
+                          </module>
+                          <module name="EventsViewer"  >
+                            <param name="segmentation">inner</param>
+                            <param name="count">3</param>
+                            <param name="reportFieldLink">report_builder_format_report</param>
+                            <param name="maxLines">3</param>
+                            <param name="entityName">results_preview</param>
+                          </module>
+                        </module>
+                      </module>
+                    </module>
+                  </module>
+                </module>
+              </module>
+            
+            
+          </module> <!--end of message -->
+        </module>
+      </module>
+    </module>
+  </module>    
+</view>

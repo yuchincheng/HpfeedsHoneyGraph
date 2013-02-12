@@ -1,0 +1,2776 @@
+{
+    "info": {
+        "started": "2012-08-20 02:37:38", 
+        "ended": "2012-08-20 02:38:05", 
+        "duration": "26 seconds", 
+        "version": "0.4-dev"
+    }, 
+    "yara": [], 
+    "signatures": [
+        {
+            "severity": 2, 
+            "description": "Creates a Windows executable on the filesystem", 
+            "alert": false, 
+            "references": [], 
+            "data": [
+                {
+                    "file_name": "C:\\WINDOWS\\system32\\cmd.exe"
+                }
+            ], 
+            "name": "creates_exe"
+        }
+    ], 
+    "behavior": {
+        "processes": [
+            {
+                "parent_id": "536", 
+                "process_name": "e3a6f83b5ef09c3911f9ca672e062d39", 
+                "process_id": "992", 
+                "first_seen": "20120819183757.292", 
+                "calls": [
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x774e0000", 
+                        "timestamp": "20120819183757.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "ole32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x771b0000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "WININET.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "QueryAdapterName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableAdapterDomainName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseDomainNameDevolution"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseDomainNameDevolution"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "PrioritizeRecordData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "PrioritizeRecordData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AllowUnqualifiedQuery"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AllowUnqualifiedQuery"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AppendToMultiLabelName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ScreenBadTlds"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ScreenUnreachableServers"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "FilterClusterIp"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "WaitForNameErrorOnAll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseEdns"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "QueryIpMatching"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UseHostsFile"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationEnabled"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableDynamicUpdate"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterPrimaryName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterAdapterName"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "EnableAdapterDomainNameRegistration"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterReverseLookup"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableReverseAddressRegistrations"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegisterWanAdapters"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DisableWanDynamicUpdate"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DefaultRegistrationTTL"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationRefreshInterval"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DefaultRegistrationRefreshInterval"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "RegistrationMaxAddressCount"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxNumberOfAddressesToRegister"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateSecurityLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000074"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateSecurityLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateZoneExcludeFile"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "UpdateTopLevelDomainZones"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "DnsTest"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCacheSize"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCacheTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxNegativeCacheTtl"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "AdapterTimeoutLimit"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "ServerPriorityTimeLimit"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MaxCachedSockets"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MulticastListenLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "MulticastSendLevel"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000078"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "SystemSetupInProgress"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x76f20000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "DNSAPI.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x71ab0000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "WS2_32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c800000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "KERNEL32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7e410000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "USER32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "ADVAPI32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c9c0000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "SHELL32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77c10000", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "msvcrt.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.302", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\e3a6f83b5ef09c3911f9ca672e062d39.tmp"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_WRITE"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 3, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\e3a6f83b5ef09c3911f9ca672e062d39.tmp"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "DeleteFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\e3a6f83b5ef09c3911f9ca672e062d39.tmp"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00ed0000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "992"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "e3a6f83b5ef09c3911f9ca672e062d39"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "24576"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00003000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c800000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "KERNEL32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7e410000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "USER32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77f10000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "GDI32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "ADVAPI32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c9c0000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "SHELL32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77c10000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "msvcrt.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "\\\\.\\NtSecureSys"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "ATTRIBUTES"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "Local AppData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "RegSetValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "Local AppData"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "0x00000070", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\e3a6f83b5ef09c3911f9ca672e062d39"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "WriteFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x0000007c"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToWrite", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "WriteFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x0000007c"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToWrite", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "WriteFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x0000007c"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToWrite", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "WriteFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x0000007c"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToWrite", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "WriteFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x0000007c"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToWrite", 
+                                "value": "15360"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x00000070"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "65536"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 3, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\WINDOWS\\Installer\\{C708A91B-BE25-1E8D-58C8-E06B38750F0A}\\syshost.exe:Zone.Identifier"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "DeleteFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\WINDOWS\\Installer\\{C708A91B-BE25-1E8D-58C8-E06B38750F0A}\\syshost.exe:Zone.Identifier"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77e70000", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "rpcrt4.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "device", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 6, 
+                        "api": "DeviceIoControl", 
+                        "arguments": [
+                            {
+                                "name": "hDevice", 
+                                "value": "0x0000003c"
+                            }, 
+                            {
+                                "name": "dwIoControlCode", 
+                                "value": "0x00390008"
+                            }, 
+                            {
+                                "name": "lpInBuffer", 
+                                "value": "0x77e46318"
+                            }, 
+                            {
+                                "name": "nInBufferSize", 
+                                "value": "0x00000100"
+                            }, 
+                            {
+                                "name": "lpOutBuffer", 
+                                "value": "0x0012e6f0"
+                            }, 
+                            {
+                                "name": "nOutBufferSize", 
+                                "value": "0x00000100"
+                            }, 
+                            {
+                                "name": "lpBytesReturned", 
+                                "value": "0x0012e6e8"
+                            }, 
+                            {
+                                "name": "lpOverlapped", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "services", 
+                        "status": "SUCCESS", 
+                        "return": "0x001c7c18", 
+                        "timestamp": "20120819183757.312", 
+                        "repeated": 0, 
+                        "api": "OpenSCManagerW", 
+                        "arguments": [
+                            {
+                                "name": "lpMachineName", 
+                                "value": "(null)"
+                            }, 
+                            {
+                                "name": "lpDatabaseName", 
+                                "value": "(null)"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "SC_MANAGER_ALL_ACCESS"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "services", 
+                        "status": "SUCCESS", 
+                        "return": "0x001c7918", 
+                        "timestamp": "20120819183757.332", 
+                        "repeated": 0, 
+                        "api": "CreateServiceW", 
+                        "arguments": [
+                            {
+                                "name": "lpServiceName", 
+                                "value": "syshost32"
+                            }, 
+                            {
+                                "name": "dwServiceType", 
+                                "value": "SERVICE_WIN32_OWN_PROCESS"
+                            }, 
+                            {
+                                "name": "dwStartType", 
+                                "value": "SERVICE_AUTO_START"
+                            }, 
+                            {
+                                "name": "lpBinaryPathName", 
+                                "value": "C:\\WINDOWS\\Installer\\{C708A91B-BE25-1E8D-58C8-E06B38750F0A}\\syshost.exe\" /service\""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "services", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.412", 
+                        "repeated": 0, 
+                        "api": "StartServiceW", 
+                        "arguments": [
+                            {
+                                "name": "hService", 
+                                "value": "0x001c7918"
+                            }, 
+                            {
+                                "name": "lpServiceArgVectors", 
+                                "value": "(null)"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "device", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.412", 
+                        "repeated": 0, 
+                        "api": "DeviceIoControl", 
+                        "arguments": [
+                            {
+                                "name": "hDevice", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "dwIoControlCode", 
+                                "value": "0x00220004"
+                            }, 
+                            {
+                                "name": "lpInBuffer", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "nInBufferSize", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "lpOutBuffer", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "nOutBufferSize", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "lpBytesReturned", 
+                                "value": "0x0012f428"
+                            }, 
+                            {
+                                "name": "lpOverlapped", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "device", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819183757.412", 
+                        "repeated": 0, 
+                        "api": "DeviceIoControl", 
+                        "arguments": [
+                            {
+                                "name": "hDevice", 
+                                "value": "0xffffffff"
+                            }, 
+                            {
+                                "name": "dwIoControlCode", 
+                                "value": "0x0022001c"
+                            }, 
+                            {
+                                "name": "lpInBuffer", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "nInBufferSize", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "lpOutBuffer", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "nOutBufferSize", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "lpBytesReturned", 
+                                "value": "0x0012f428"
+                            }, 
+                            {
+                                "name": "lpOverlapped", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.412", 
+                        "repeated": 0, 
+                        "api": "MoveFileExW", 
+                        "arguments": [
+                            {
+                                "name": "lpExistingFileName", 
+                                "value": "C:\\e3a6f83b5ef09c3911f9ca672e062d39"
+                            }, 
+                            {
+                                "name": "lpNewFileName", 
+                                "value": "C:\\DOCUME~1\\Me\\LOCALS~1\\Temp\\899b306.tmp"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.422", 
+                        "repeated": 0, 
+                        "api": "MoveFileExW", 
+                        "arguments": [
+                            {
+                                "name": "lpExistingFileName", 
+                                "value": "C:\\DOCUME~1\\Me\\LOCALS~1\\Temp\\899b306.tmp"
+                            }, 
+                            {
+                                "name": "lpNewFileName", 
+                                "value": "(null)"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x00000094", 
+                        "timestamp": "20120819183757.422", 
+                        "repeated": 0, 
+                        "api": "OpenMutexW", 
+                        "arguments": [
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "0x00120001"
+                            }, 
+                            {
+                                "name": "lpName", 
+                                "value": "ShimCacheMutex"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77c00000", 
+                        "timestamp": "20120819183757.442", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "VERSION.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000a8", 
+                        "timestamp": "20120819183757.452", 
+                        "repeated": 1, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\WINDOWS\\system32\\cmd.exe"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819183757.452", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x000000a0"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "Cache"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819183757.452", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "advapi32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "SUCCESS", 
+                        "return": "1040", 
+                        "timestamp": "20120819183757.452", 
+                        "repeated": 0, 
+                        "api": "CreateProcessW", 
+                        "arguments": [
+                            {
+                                "name": "lpApplicationName", 
+                                "value": "(null)"
+                            }, 
+                            {
+                                "name": "lpCommandLine", 
+                                "value": "cmd.exe /C del /Q /F C:\\DOCUME~1\\Me\\LOCALS~1\\Temp\\899b306.tmp\"\""
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "", 
+                        "return": "", 
+                        "timestamp": "20120819183757.452", 
+                        "repeated": 0, 
+                        "api": "ExitProcess", 
+                        "arguments": [
+                            {
+                                "name": "uExitCode", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ], 
+        "processtree": [
+            {
+                "pid": 992, 
+                "name": "e3a6f83b5ef09c3911f9ca672e062d39", 
+                "children": []
+            }
+        ], 
+        "summary": {
+            "files": [
+                "C:\\e3a6f83b5ef09c3911f9ca672e062d39.tmp", 
+                "\\\\.\\NtSecureSys", 
+                "C:\\e3a6f83b5ef09c3911f9ca672e062d39", 
+                "C:\\WINDOWS\\Installer\\{C708A91B-BE25-1E8D-58C8-E06B38750F0A}\\syshost.exe:Zone.Identifier", 
+                "C:\\WINDOWS\\system32\\cmd.exe"
+            ], 
+            "keys": [], 
+            "mutexes": [
+                "ShimCacheMutex"
+            ]
+        }
+    }, 
+    "virustotal": {
+        "scan_id": "961304fdabe28cded7360df3e0415b727d7afd0bbe2d9e2ffc279e3e64da3da3-1345169361", 
+        "sha1": "027ca2c3693bcd14738d114efca5340fce93bf6e", 
+        "resource": "e3a6f83b5ef09c3911f9ca672e062d39", 
+        "response_code": 1, 
+        "scan_date": "2012-08-17 02:09:21", 
+        "permalink": "https://www.virustotal.com/file/961304fdabe28cded7360df3e0415b727d7afd0bbe2d9e2ffc279e3e64da3da3/analysis/1345169361/", 
+        "verbose_msg": "Scan finished, scan information embedded in this object", 
+        "sha256": "961304fdabe28cded7360df3e0415b727d7afd0bbe2d9e2ffc279e3e64da3da3", 
+        "positives": 34, 
+        "total": 41, 
+        "md5": "e3a6f83b5ef09c3911f9ca672e062d39", 
+        "scans": {
+            "nProtect": {
+                "detected": true, 
+                "version": "2012-08-16.02", 
+                "result": "Trojan/W32.Agent.277504.FL", 
+                "update": "20120816"
+            }, 
+            "CAT-QuickHeal": {
+                "detected": true, 
+                "version": "12.00", 
+                "result": "TrojanDropper.Necurs", 
+                "update": "20120814"
+            }, 
+            "McAfee": {
+                "detected": true, 
+                "version": "5.400.0.1158", 
+                "result": "Generic Dropper!1v3", 
+                "update": "20120817"
+            }, 
+            "TheHacker": {
+                "detected": true, 
+                "version": "None", 
+                "result": "Trojan/Dropper.Necurs.cs", 
+                "update": "20120816"
+            }, 
+            "K7AntiVirus": {
+                "detected": true, 
+                "version": "9.147.7506", 
+                "result": "Trojan", 
+                "update": "20120816"
+            }, 
+            "VirusBuster": {
+                "detected": true, 
+                "version": "15.0.151.0", 
+                "result": "Trojan.DR.Necurs!+ETjHl0mY1k", 
+                "update": "20120816"
+            }, 
+            "F-Prot": {
+                "detected": false, 
+                "version": "4.6.5.141", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "Symantec": {
+                "detected": true, 
+                "version": "20121.1.0.298", 
+                "result": "Trojan.Gen", 
+                "update": "20120817"
+            }, 
+            "Norman": {
+                "detected": true, 
+                "version": "6.08.06", 
+                "result": "W32/Suspicious_Gen4.ARNOW", 
+                "update": "20120816"
+            }, 
+            "TotalDefense": {
+                "detected": false, 
+                "version": "37.0.10035", 
+                "result": null, 
+                "update": "20120816"
+            }, 
+            "TrendMicro-HouseCall": {
+                "detected": true, 
+                "version": "9.500.0.1008", 
+                "result": "TROJ_DROPPER.WRN", 
+                "update": "20120817"
+            }, 
+            "Avast": {
+                "detected": true, 
+                "version": "6.0.1289.0", 
+                "result": "Win32:Rootkit-gen [Rtk]", 
+                "update": "20120816"
+            }, 
+            "eSafe": {
+                "detected": true, 
+                "version": "7.0.17.0", 
+                "result": "Win32.Trojan", 
+                "update": "20120816"
+            }, 
+            "ClamAV": {
+                "detected": false, 
+                "version": "0.97.3.0", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "Kaspersky": {
+                "detected": true, 
+                "version": "9.0.0.837", 
+                "result": "Trojan-Dropper.Win32.Necurs.cs", 
+                "update": "20120817"
+            }, 
+            "BitDefender": {
+                "detected": true, 
+                "version": "7.2", 
+                "result": "Trojan.Generic.KD.686675", 
+                "update": "20120817"
+            }, 
+            "SUPERAntiSpyware": {
+                "detected": false, 
+                "version": "4.40.0.1006", 
+                "result": null, 
+                "update": "20120816"
+            }, 
+            "ByteHero": {
+                "detected": false, 
+                "version": "1.0.0.1", 
+                "result": null, 
+                "update": "20120814"
+            }, 
+            "Emsisoft": {
+                "detected": true, 
+                "version": "5.1.0.11", 
+                "result": "Trojan-Spy.Win32.Zbot!IK", 
+                "update": "20120817"
+            }, 
+            "Comodo": {
+                "detected": true, 
+                "version": "13261", 
+                "result": "UnclassifiedMalware", 
+                "update": "20120817"
+            }, 
+            "F-Secure": {
+                "detected": true, 
+                "version": "9.0.16440.0", 
+                "result": "Trojan.Generic.KD.686675", 
+                "update": "20120817"
+            }, 
+            "DrWeb": {
+                "detected": true, 
+                "version": "7.0.3.07130", 
+                "result": "Trojan.Necurs.23", 
+                "update": "20120817"
+            }, 
+            "VIPRE": {
+                "detected": true, 
+                "version": "12668", 
+                "result": "Trojan.Win32.Generic.pak!cobra", 
+                "update": "20120817"
+            }, 
+            "AntiVir": {
+                "detected": true, 
+                "version": "7.11.40.26", 
+                "result": "TR/Drop.Necurs.cs", 
+                "update": "20120817"
+            }, 
+            "TrendMicro": {
+                "detected": true, 
+                "version": "9.561.0.1027", 
+                "result": "TROJ_DROPPER.WRN", 
+                "update": "20120817"
+            }, 
+            "McAfee-GW-Edition": {
+                "detected": true, 
+                "version": "2012.1", 
+                "result": "Generic Dropper!1v3", 
+                "update": "20120816"
+            }, 
+            "Sophos": {
+                "detected": true, 
+                "version": "4.80.0", 
+                "result": "Mal/Agent-AIS", 
+                "update": "20120817"
+            }, 
+            "Jiangmin": {
+                "detected": true, 
+                "version": "13.0.900", 
+                "result": "TrojanDropper.Necurs.bv", 
+                "update": "20120816"
+            }, 
+            "Antiy-AVL": {
+                "detected": false, 
+                "version": "2.0.3.7", 
+                "result": null, 
+                "update": "20120816"
+            }, 
+            "Microsoft": {
+                "detected": true, 
+                "version": "1.8601", 
+                "result": "TrojanDropper:Win32/Necurs.gen!A", 
+                "update": "20120817"
+            }, 
+            "ViRobot": {
+                "detected": true, 
+                "version": "2011.4.7.4223", 
+                "result": "Dropper.A.Necurs.277504", 
+                "update": "20120816"
+            }, 
+            "GData": {
+                "detected": true, 
+                "version": "22", 
+                "result": "Trojan.Generic.KD.686675", 
+                "update": "20120817"
+            }, 
+            "Commtouch": {
+                "detected": false, 
+                "version": "5.3.2.6", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "ESET-NOD32": {
+                "detected": true, 
+                "version": "7392", 
+                "result": "a variant of Win32/Kryptik.AJFW", 
+                "update": "20120816"
+            }, 
+            "VBA32": {
+                "detected": true, 
+                "version": "3.12.18.2", 
+                "result": "Trojan-Dropper.Necurs.9812", 
+                "update": "20120814"
+            }, 
+            "PCTools": {
+                "detected": true, 
+                "version": "8.0.0.5", 
+                "result": "Trojan.Gen", 
+                "update": "20120813"
+            }, 
+            "Rising": {
+                "detected": true, 
+                "version": "24.23.01.03", 
+                "result": "Trojan.Win32.Generic.12E47E91", 
+                "update": "20120815"
+            }, 
+            "Ikarus": {
+                "detected": true, 
+                "version": "T3.1.1.122.0", 
+                "result": "Trojan-Spy.Win32.Zbot", 
+                "update": "20120817"
+            }, 
+            "Fortinet": {
+                "detected": true, 
+                "version": "4.3.398.0", 
+                "result": "W32/Necurs.CS!tr", 
+                "update": "20120817"
+            }, 
+            "AVG": {
+                "detected": true, 
+                "version": "10.0.0.1190", 
+                "result": "Generic29.EWK", 
+                "update": "20120817"
+            }, 
+            "Panda": {
+                "detected": true, 
+                "version": "10.0.3.5", 
+                "result": "Generic Trojan", 
+                "update": "20120816"
+            }
+        }
+    }, 
+    "static": {
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "GetCapture", 
+                        "address": "0x431078"
+                    }, 
+                    {
+                        "name": "GetAsyncKeyState", 
+                        "address": "0x43107c"
+                    }, 
+                    {
+                        "name": "GetDoubleClickTime", 
+                        "address": "0x431080"
+                    }, 
+                    {
+                        "name": "SetWindowTextA", 
+                        "address": "0x431084"
+                    }, 
+                    {
+                        "name": "GetDesktopWindow", 
+                        "address": "0x431088"
+                    }, 
+                    {
+                        "name": "EnumChildWindows", 
+                        "address": "0x43108c"
+                    }, 
+                    {
+                        "name": "RegisterClassExW", 
+                        "address": "0x431090"
+                    }
+                ], 
+                "dll": "USER32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "GetArcDirection", 
+                        "address": "0x431008"
+                    }, 
+                    {
+                        "name": "CreatePolygonRgn", 
+                        "address": "0x43100c"
+                    }, 
+                    {
+                        "name": "DeleteObject", 
+                        "address": "0x431010"
+                    }, 
+                    {
+                        "name": "GetRegionData", 
+                        "address": "0x431014"
+                    }, 
+                    {
+                        "name": "GetStockObject", 
+                        "address": "0x431018"
+                    }
+                ], 
+                "dll": "GDI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": null, 
+                        "address": "0x431000"
+                    }
+                ], 
+                "dll": "COMCTL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "SetFileAttributesA", 
+                        "address": "0x431020"
+                    }, 
+                    {
+                        "name": "GetThreadLocale", 
+                        "address": "0x431024"
+                    }, 
+                    {
+                        "name": "HeapDestroy", 
+                        "address": "0x431028"
+                    }, 
+                    {
+                        "name": "SetEndOfFile", 
+                        "address": "0x43102c"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x431030"
+                    }, 
+                    {
+                        "name": "GetEnvironmentVariableA", 
+                        "address": "0x431034"
+                    }, 
+                    {
+                        "name": "DeleteCriticalSection", 
+                        "address": "0x431038"
+                    }, 
+                    {
+                        "name": "GetDateFormatA", 
+                        "address": "0x43103c"
+                    }, 
+                    {
+                        "name": "FreeLibrary", 
+                        "address": "0x431040"
+                    }, 
+                    {
+                        "name": "LoadLibraryA", 
+                        "address": "0x431044"
+                    }, 
+                    {
+                        "name": "GetProcAddress", 
+                        "address": "0x431048"
+                    }, 
+                    {
+                        "name": "InitializeCriticalSection", 
+                        "address": "0x43104c"
+                    }, 
+                    {
+                        "name": "SetHandleCount", 
+                        "address": "0x431050"
+                    }, 
+                    {
+                        "name": "GetCurrentDirectoryW", 
+                        "address": "0x431054"
+                    }, 
+                    {
+                        "name": "HeapAlloc", 
+                        "address": "0x431058"
+                    }, 
+                    {
+                        "name": "HeapCreate", 
+                        "address": "0x43105c"
+                    }, 
+                    {
+                        "name": "LocalFree", 
+                        "address": "0x431060"
+                    }, 
+                    {
+                        "name": "LocalSize", 
+                        "address": "0x431064"
+                    }, 
+                    {
+                        "name": "LocalAlloc", 
+                        "address": "0x431068"
+                    }, 
+                    {
+                        "name": "GetTickCount", 
+                        "address": "0x43106c"
+                    }, 
+                    {
+                        "name": "GetEnvironmentStrings", 
+                        "address": "0x431070"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "pe_exports": [], 
+        "imported_dll_count": 4, 
+        "pe_resources": [], 
+        "pe_versioninfo": [
+            {
+                "name": "LegalCopyright", 
+                "value": "Copyright \\xa9 eVGA 2007-2011"
+            }, 
+            {
+                "name": "InternalName", 
+                "value": "Sequence"
+            }, 
+            {
+                "name": "FileVersion", 
+                "value": "3.2.0"
+            }, 
+            {
+                "name": "CompanyName", 
+                "value": "eVGA"
+            }, 
+            {
+                "name": "ProductName", 
+                "value": "Sequence"
+            }, 
+            {
+                "name": "ProductVersion", 
+                "value": "3.2.0"
+            }, 
+            {
+                "name": "FileDescription", 
+                "value": "Sequence"
+            }, 
+            {
+                "name": "OriginalFilename", 
+                "value": "sequence.exe"
+            }, 
+            {
+                "name": "Translation", 
+                "value": "0x0809 0x04b0"
+            }
+        ], 
+        "pe_sections": [
+            {
+                "size_of_data": "0x2fe00", 
+                "virtual_address": "0x1000", 
+                "entropy": 6.2367162653120225, 
+                "name": ".text\\x00\\x00\\x00", 
+                "virtual_size": "0x2fcde"
+            }, 
+            {
+                "size_of_data": "0x12600", 
+                "virtual_address": "0x31000", 
+                "entropy": 5.128899474783536, 
+                "name": ".rdata\\x00\\x00", 
+                "virtual_size": "0x12518"
+            }, 
+            {
+                "size_of_data": "0x200", 
+                "virtual_address": "0x44000", 
+                "entropy": 2.2578940161556416, 
+                "name": ".data\\x00\\x00\\x00", 
+                "virtual_size": "0x108"
+            }, 
+            {
+                "size_of_data": "0x1200", 
+                "virtual_address": "0x45000", 
+                "entropy": 3.896032045108453, 
+                "name": ".rsrc\\x00\\x00\\x00", 
+                "virtual_size": "0x1200"
+            }
+        ]
+    }, 
+    "dropped": [], 
+    "file": {
+        "size": 277504, 
+        "sha1": "027ca2c3693bcd14738d114efca5340fce93bf6e", 
+        "name": "e3a6f83b5ef09c3911f9ca672e062d39", 
+        "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit", 
+        "crc32": "A52BE595", 
+        "ssdeep": null, 
+        "sha256": "961304fdabe28cded7360df3e0415b727d7afd0bbe2d9e2ffc279e3e64da3da3", 
+        "sha512": "74a9c8edd0599f88d4a0406f51c7c9775e74b7307e3c6fe1a8e3789794790425583d47d2869f5150966403a3a956db0a82b7d03d8488a75d7e9a0769fde17432", 
+        "md5": "e3a6f83b5ef09c3911f9ca672e062d39"
+    }, 
+    "debug": {
+        "log": "2012-08-19 20:37:53,226 [root] INFO: No analysis package specified, trying to detect it automagically\r\n2012-08-19 20:37:53,246 [lib.api.process] INFO: Successfully executed process from path \"C:\\e3a6f83b5ef09c3911f9ca672e062d39\" with arguments \"None\" with pid 992\r\n2012-08-19 20:37:55,259 [lib.api.process] INFO: Using QueueUserAPC injection\r\n2012-08-19 20:37:55,259 [lib.api.process] INFO: Successfully injected process with pid 992\r\n2012-08-19 20:37:57,262 [lib.api.process] INFO: Successfully resumed process with pid 992\r\n2012-08-19 20:37:57,262 [root] INFO: Added new process to list with pid: 992\r\n2012-08-19 20:37:57,471 [root] INFO: Added new process to list with pid: 1040\r\n2012-08-19 20:37:58,263 [root] INFO: Process with pid 992 has terminated\r\n2012-08-19 20:37:59,265 [root] INFO: Process with pid 1040 has terminated\r\n2012-08-19 20:37:59,484 [lib.api.process] ERROR: VirtualAllocEx failed when injecting process with pid 1040, injection aborted (Error: Access is denied (ERROR_ACCESS_DENIED))\r\n2012-08-19 20:38:00,266 [root] INFO: Analysis completed\r\n"
+    }, 
+    "network": {
+        "http": [], 
+        "udp": [
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }
+        ], 
+        "hosts": [
+            "192.168.56.101", 
+            "192.168.56.1", 
+            "239.255.255.250", 
+            "224.0.0.22", 
+            "192.168.56.255"
+        ], 
+        "dns": [
+            {
+                "ip": "64.4.11.37", 
+                "hostname": "microsoft.com"
+            }
+        ], 
+        "tcp": []
+    }
+}

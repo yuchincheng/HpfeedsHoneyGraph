@@ -1,0 +1,67 @@
+<view autoCancelInterval="90" isVisible="true" onunloadCancelJobs="true" template="dashboard.html" >
+  <!--  autoCancelInterval is set here to 100  -->
+  <label>Landing-Hopping Path by Thug Events </label>
+  <module name="AccountBar" layoutPanel="appHeader"/>
+  <module name="AppBar" layoutPanel="navigationHeader"/>
+  <module name="Message" layoutPanel="messaging">
+    <param name="filter">*</param>
+    <param name="clearOnJobDispatch">False</param>
+    <param name="maxSize">1</param>
+  </module>
+  
+  <module name="TimeRangePicker" layoutPanel="panel_row2_col1">
+    <module name="StaticContentSample" layoutPanel="panel_row2_col1" >
+      <param name="text">
+        <![CDATA[ Here is an example where clicking on one of the top 10 recent sourcetypes by volume indexed,
+        shows you a timechart of avg(eps) for that particular sourcetype over the same period. ]]>
+      </param>
+    </module>
+    <param name="default">Last 24 hours</param>
+    <param name="searchWhenChanged">true</param>
+    
+    
+    <module name="HiddenSavedSearch" layoutPanel="panel_row3_col1" group="Interlink graph: Landing-Site, Hopping_site and Malwares" autoRun="True">
+     <param name="savedSearch">nodehopping</param>
+     <module name="sitehopping_without_single_node"></module>
+    </module>
+
+    
+    <module name="HiddenSavedSearch" layoutPanel="panel_row4_col1" autoRun="True" group="Malware lists with malicious hostname and resolved IPs">
+      <param name="savedSearch">nodehopping</param>
+      <module name="ResultsHeader" layoutPanel="panel_row4_col1">
+        <param name="entityLabel">results</param>
+        <param name="entityName">results</param>
+        <module name="Paginator">
+          <param name="count">6</param>
+          <param name="entityName">results</param>
+          <param name="maxPages">10</param>
+          <module name="SimpleResultsTable">
+            <param name="drilldown">all</param>
+            <param name="entityName">results</param>
+            <module name="ConvertToDrilldownSearch">
+              
+              
+              <module name="Paginator">
+                <param name="count">6</param>
+                <param name="entityName">events</param>
+                <param name="maxPages">10</param>
+                <module name="JobProgressIndicator"></module>
+                <module name="SimpleResultsHeader">
+                  <param name="entityName">events</param>
+                  <param name="headerFormat">$time$ : Found $count$ events </param>
+                </module>
+                <module name="EventsViewer" >
+                  <param name="segmentation">inner</param>
+                  <param name="count">6</param>
+                  <param name="reportFieldLink">report_builder_format_report</param>
+                  <param name="maxLines">4</param>
+                  <param name="entityName">results_preview</param>
+                </module>
+              </module>
+            </module>
+          </module>
+        </module>
+      </module>
+    </module>
+  </module>
+</view>

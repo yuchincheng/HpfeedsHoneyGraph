@@ -1,0 +1,2076 @@
+{
+    "info": {
+        "started": "2012-08-19 18:12:23", 
+        "ended": "2012-08-19 18:13:13", 
+        "duration": "50 seconds", 
+        "version": "0.4-dev"
+    }, 
+    "yara": [], 
+    "signatures": [], 
+    "behavior": {
+        "processes": [
+            {
+                "parent_id": "1024", 
+                "process_name": "47205b55717facf923434c3f69747c7b", 
+                "process_id": "1076", 
+                "first_seen": "20120819101255.192", 
+                "calls": [
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "Compositing"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x00000088"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "LameButtonText"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "", 
+                        "return": "", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "IsDebuggerPresent", 
+                        "arguments": []
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x5ad70000", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "uxtheme.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x0000008c", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.LBES.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x00000094", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.Compart.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x00000098", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.Asm.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x0000009c", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.Layouts.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000a0", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.TMD.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000a4", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "CreateMutexW", 
+                        "arguments": [
+                            {
+                                "name": "lpName", 
+                                "value": "CTF.TimListCache.FMPDefaultS-1-5-21-1547161642-507921405-839522115-1003MUTEX.DefaultS-1-5-21-1547161642-507921405-839522115-1003"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "hooking", 
+                        "status": "SUCCESS", 
+                        "return": "0x0026006f", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "SetWindowsHookExA", 
+                        "arguments": [
+                            {
+                                "name": "idHook", 
+                                "value": "WH_KEYBOARD"
+                            }, 
+                            {
+                                "name": "lpfn", 
+                                "value": "0x747307c3"
+                            }, 
+                            {
+                                "name": "hMod", 
+                                "value": "0x74720000"
+                            }, 
+                            {
+                                "name": "dwThreadId", 
+                                "value": "0x0000044c"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "hooking", 
+                        "status": "SUCCESS", 
+                        "return": "0x0010003d", 
+                        "timestamp": "20120819101255.192", 
+                        "repeated": 0, 
+                        "api": "SetWindowsHookExA", 
+                        "arguments": [
+                            {
+                                "name": "idHook", 
+                                "value": "WH_MOUSE"
+                            }, 
+                            {
+                                "name": "lpfn", 
+                                "value": "0x747304cd"
+                            }, 
+                            {
+                                "name": "hMod", 
+                                "value": "0x74720000"
+                            }, 
+                            {
+                                "name": "dwThreadId", 
+                                "value": "0x0000044c"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00cf0000", 
+                        "timestamp": "20120819101255.212", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "221184"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00003000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77c10000", 
+                        "timestamp": "20120819101255.272", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "MSVCRT.DLL"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "C:\\WINDOWS\\system32\\MFC42LOC.DLL"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x73dd0000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "MFC42.DLL"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77c10000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "MSVCRT.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c800000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "KERNEL32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "ADVAPI32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x76080000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "MSVCP60.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "OpenMutexW", 
+                        "arguments": [
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "SYNCHRONIZE"
+                            }, 
+                            {
+                                "name": "lpName", 
+                                "value": "Global\\NtKernelTrusted"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "OpenMutexW", 
+                        "arguments": [
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "MUTEX_ALL_ACCESS"
+                            }, 
+                            {
+                                "name": "lpName", 
+                                "value": "Global\\NtKernelProc.1636"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77e70000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "rpcrt4.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000f4", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "CreateFileW", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "\\\\.\\PIPE\\lsarpc"
+                            }, 
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "GENERIC_READ | GENERIC_WRITE"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77fe0000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "Secur32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c800000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "kernel32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x76bf0000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "psapi.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x7c900000", 
+                        "timestamp": "20120819101255.292", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "ntdll.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x000000f0"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "2"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "filesystem", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "ReadFile", 
+                        "arguments": [
+                            {
+                                "name": "hFile", 
+                                "value": "0x000000f0"
+                            }, 
+                            {
+                                "name": "nNumberOfBytesToRead", 
+                                "value": "248"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x026e0000", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "311296"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x02850000", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1636"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "explorer.exe"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "311296"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00f20000", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "305"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "WriteProcessMemory", 
+                        "arguments": [
+                            {
+                                "name": "lpBaseAddress", 
+                                "value": "0x026e0000"
+                            }, 
+                            {
+                                "name": "lpBuffer", 
+                                "value": "0x00d7dff8"
+                            }, 
+                            {
+                                "name": "nSize", 
+                                "value": "311296"
+                            }, 
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "WriteProcessMemory", 
+                        "arguments": [
+                            {
+                                "name": "lpBaseAddress", 
+                                "value": "0x00f20000"
+                            }, 
+                            {
+                                "name": "lpBuffer", 
+                                "value": "0x0012b420"
+                            }, 
+                            {
+                                "name": "nSize", 
+                                "value": "305"
+                            }, 
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1636"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "explorer.exe"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "WriteProcessMemory", 
+                        "arguments": [
+                            {
+                                "name": "lpBaseAddress", 
+                                "value": "0x02850000"
+                            }, 
+                            {
+                                "name": "lpBuffer", 
+                                "value": "0x00d30048"
+                            }, 
+                            {
+                                "name": "nSize", 
+                                "value": "311296"
+                            }, 
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "SUCCESS", 
+                        "return": "0x000000f0", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "CreateRemoteThread", 
+                        "arguments": [
+                            {
+                                "name": "lpStartAddress", 
+                                "value": "0x02fd28c6"
+                            }, 
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "47205b55717facf923434c3f69747c7b"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "", 
+                        "return": "", 
+                        "timestamp": "20120819101255.302", 
+                        "repeated": 0, 
+                        "api": "ExitProcess", 
+                        "arguments": [
+                            {
+                                "name": "uExitCode", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ], 
+        "processtree": [
+            {
+                "pid": 1076, 
+                "name": "47205b55717facf923434c3f69747c7b", 
+                "children": []
+            }
+        ], 
+        "summary": {
+            "files": [
+                "\\\\.\\PIPE\\lsarpc"
+            ], 
+            "keys": [], 
+            "mutexes": [
+                "CTF.LBES.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "CTF.Compart.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "CTF.Asm.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "CTF.Layouts.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "CTF.TMD.MutexDefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "CTF.TimListCache.FMPDefaultS-1-5-21-1547161642-507921405-839522115-1003MUTEX.DefaultS-1-5-21-1547161642-507921405-839522115-1003", 
+                "Global\\NtKernelTrusted", 
+                "Global\\NtKernelProc.1636"
+            ]
+        }
+    }, 
+    "virustotal": {
+        "scan_id": "de8de52c7744f59ab9505ef0fbba04f17349ec835602fe05e072df51d0c26cab-1345297015", 
+        "sha1": "efaecf3b4cf29f53cbc7c5bd9b131ae465b057dd", 
+        "resource": "47205b55717facf923434c3f69747c7b", 
+        "response_code": 1, 
+        "scan_date": "2012-08-18 13:36:55", 
+        "permalink": "https://www.virustotal.com/file/de8de52c7744f59ab9505ef0fbba04f17349ec835602fe05e072df51d0c26cab/analysis/1345297015/", 
+        "verbose_msg": "Scan finished, scan information embedded in this object", 
+        "sha256": "de8de52c7744f59ab9505ef0fbba04f17349ec835602fe05e072df51d0c26cab", 
+        "positives": 29, 
+        "total": 41, 
+        "md5": "47205b55717facf923434c3f69747c7b", 
+        "scans": {
+            "nProtect": {
+                "detected": true, 
+                "version": "2012-08-18.02", 
+                "result": "Trojan.Generic.KDV.694183", 
+                "update": "20120818"
+            }, 
+            "CAT-QuickHeal": {
+                "detected": true, 
+                "version": "12.00", 
+                "result": "TrojanDropper.Injector.fnym", 
+                "update": "20120818"
+            }, 
+            "McAfee": {
+                "detected": true, 
+                "version": "5.400.0.1158", 
+                "result": "PWS-Zbot.gen.akr", 
+                "update": "20120818"
+            }, 
+            "TheHacker": {
+                "detected": false, 
+                "version": "None", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "K7AntiVirus": {
+                "detected": true, 
+                "version": "9.147.7516", 
+                "result": "Spyware", 
+                "update": "20120818"
+            }, 
+            "VirusBuster": {
+                "detected": true, 
+                "version": "15.0.153.0", 
+                "result": "Trojan.Kryptik!77IcCHIGf7o", 
+                "update": "20120817"
+            }, 
+            "F-Prot": {
+                "detected": false, 
+                "version": "4.6.5.141", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "Symantec": {
+                "detected": true, 
+                "version": "20121.1.0.298", 
+                "result": "Trojan.Gen", 
+                "update": "20120818"
+            }, 
+            "Norman": {
+                "detected": true, 
+                "version": "6.08.06", 
+                "result": "W32/Suspicious_Gen4.ATPXV", 
+                "update": "20120817"
+            }, 
+            "TotalDefense": {
+                "detected": false, 
+                "version": "37.0.10036", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "TrendMicro-HouseCall": {
+                "detected": true, 
+                "version": "9.500.0.1008", 
+                "result": "TROJ_GEN.RCBCCHF", 
+                "update": "20120818"
+            }, 
+            "Avast": {
+                "detected": true, 
+                "version": "6.0.1289.0", 
+                "result": "Win32:Malware-gen", 
+                "update": "20120818"
+            }, 
+            "eSafe": {
+                "detected": false, 
+                "version": "7.0.17.0", 
+                "result": null, 
+                "update": "20120816"
+            }, 
+            "ClamAV": {
+                "detected": false, 
+                "version": "0.97.3.0", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "Kaspersky": {
+                "detected": true, 
+                "version": "9.0.0.837", 
+                "result": "Trojan-Dropper.Win32.Injector.fnym", 
+                "update": "20120818"
+            }, 
+            "BitDefender": {
+                "detected": true, 
+                "version": "7.2", 
+                "result": "Trojan.Generic.KDV.694183", 
+                "update": "20120818"
+            }, 
+            "SUPERAntiSpyware": {
+                "detected": false, 
+                "version": "4.40.0.1006", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "Emsisoft": {
+                "detected": true, 
+                "version": "5.1.0.11", 
+                "result": "Backdoor.Win32.Bifrose!IK", 
+                "update": "20120818"
+            }, 
+            "Comodo": {
+                "detected": true, 
+                "version": "13273", 
+                "result": "Heur.Suspicious", 
+                "update": "20120818"
+            }, 
+            "F-Secure": {
+                "detected": true, 
+                "version": "9.0.16440.0", 
+                "result": "Trojan.Generic.KDV.694183", 
+                "update": "20120818"
+            }, 
+            "DrWeb": {
+                "detected": true, 
+                "version": "7.0.3.07130", 
+                "result": "Trojan.Inject1.7783", 
+                "update": "20120818"
+            }, 
+            "VIPRE": {
+                "detected": true, 
+                "version": "12686", 
+                "result": "Trojan.Win32.Generic!SB.0", 
+                "update": "20120818"
+            }, 
+            "AntiVir": {
+                "detected": true, 
+                "version": "7.11.40.70", 
+                "result": "TR/Drop.Injector.fnym", 
+                "update": "20120818"
+            }, 
+            "TrendMicro": {
+                "detected": true, 
+                "version": "9.561.0.1027", 
+                "result": "TROJ_GEN.RCBCCHF", 
+                "update": "20120818"
+            }, 
+            "McAfee-GW-Edition": {
+                "detected": true, 
+                "version": "2012.1", 
+                "result": "PWS-Zbot.gen.akr", 
+                "update": "20120818"
+            }, 
+            "Sophos": {
+                "detected": false, 
+                "version": "4.80.0", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "Jiangmin": {
+                "detected": true, 
+                "version": "13.0.900", 
+                "result": "TrojanDropper.Injector.amfk", 
+                "update": "20120818"
+            }, 
+            "Antiy-AVL": {
+                "detected": false, 
+                "version": "2.0.3.7", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "Microsoft": {
+                "detected": true, 
+                "version": "1.8601", 
+                "result": "Backdoor:Win32/Bifrose.IY", 
+                "update": "20120818"
+            }, 
+            "ViRobot": {
+                "detected": true, 
+                "version": "2011.4.7.4223", 
+                "result": "Dropper.A.Injector.286208.W", 
+                "update": "20120818"
+            }, 
+            "AhnLab-V3": {
+                "detected": true, 
+                "version": "2012.08.19.00", 
+                "result": "Dropper/Win32.Injector", 
+                "update": "20120818"
+            }, 
+            "GData": {
+                "detected": true, 
+                "version": "22", 
+                "result": "Trojan.Generic.KDV.694183", 
+                "update": "20120818"
+            }, 
+            "Commtouch": {
+                "detected": false, 
+                "version": "5.3.2.6", 
+                "result": null, 
+                "update": "20120818"
+            }, 
+            "ByteHero": {
+                "detected": false, 
+                "version": "1.0.0.1", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "VBA32": {
+                "detected": false, 
+                "version": "3.12.18.2", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "ESET-NOD32": {
+                "detected": true, 
+                "version": "7396", 
+                "result": "probably a variant of Win32/Kryptik.AJYJ", 
+                "update": "20120818"
+            }, 
+            "Rising": {
+                "detected": false, 
+                "version": "24.23.04.01", 
+                "result": null, 
+                "update": "20120817"
+            }, 
+            "Ikarus": {
+                "detected": true, 
+                "version": "T3.1.1.122.0", 
+                "result": "Backdoor.Win32.Bifrose", 
+                "update": "20120818"
+            }, 
+            "Fortinet": {
+                "detected": true, 
+                "version": "4.3.398.0", 
+                "result": "W32/Injector.FNYM!tr", 
+                "update": "20120818"
+            }, 
+            "AVG": {
+                "detected": true, 
+                "version": "10.0.0.1190", 
+                "result": "Dropper.Generic6.AVZQ", 
+                "update": "20120818"
+            }, 
+            "Panda": {
+                "detected": true, 
+                "version": "10.0.3.5", 
+                "result": "Generic Trojan", 
+                "update": "20120818"
+            }
+        }
+    }, 
+    "static": {
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "CreateFileW", 
+                        "address": "0x40a020"
+                    }, 
+                    {
+                        "name": "FlushFileBuffers", 
+                        "address": "0x40a024"
+                    }, 
+                    {
+                        "name": "IsProcessorFeaturePresent", 
+                        "address": "0x40a028"
+                    }, 
+                    {
+                        "name": "HeapReAlloc", 
+                        "address": "0x40a02c"
+                    }, 
+                    {
+                        "name": "GetStringTypeW", 
+                        "address": "0x40a030"
+                    }, 
+                    {
+                        "name": "LCMapStringW", 
+                        "address": "0x40a034"
+                    }, 
+                    {
+                        "name": "WriteConsoleW", 
+                        "address": "0x40a038"
+                    }, 
+                    {
+                        "name": "SetStdHandle", 
+                        "address": "0x40a03c"
+                    }, 
+                    {
+                        "name": "HeapSize", 
+                        "address": "0x40a040"
+                    }, 
+                    {
+                        "name": "RtlUnwind", 
+                        "address": "0x40a044"
+                    }, 
+                    {
+                        "name": "LoadLibraryW", 
+                        "address": "0x40a048"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x40a04c"
+                    }, 
+                    {
+                        "name": "MultiByteToWideChar", 
+                        "address": "0x40a050"
+                    }, 
+                    {
+                        "name": "Sleep", 
+                        "address": "0x40a054"
+                    }, 
+                    {
+                        "name": "IsValidCodePage", 
+                        "address": "0x40a058"
+                    }, 
+                    {
+                        "name": "GetOEMCP", 
+                        "address": "0x40a05c"
+                    }, 
+                    {
+                        "name": "GetACP", 
+                        "address": "0x40a060"
+                    }, 
+                    {
+                        "name": "GetCPInfo", 
+                        "address": "0x40a064"
+                    }, 
+                    {
+                        "name": "GetConsoleMode", 
+                        "address": "0x40a068"
+                    }, 
+                    {
+                        "name": "GetConsoleCP", 
+                        "address": "0x40a06c"
+                    }, 
+                    {
+                        "name": "SetFilePointer", 
+                        "address": "0x40a070"
+                    }, 
+                    {
+                        "name": "RaiseException", 
+                        "address": "0x40a074"
+                    }, 
+                    {
+                        "name": "GetSystemTimeAsFileTime", 
+                        "address": "0x40a078"
+                    }, 
+                    {
+                        "name": "CloseHandle", 
+                        "address": "0x40a07c"
+                    }, 
+                    {
+                        "name": "GetModuleHandleA", 
+                        "address": "0x40a080"
+                    }, 
+                    {
+                        "name": "GlobalFree", 
+                        "address": "0x40a084"
+                    }, 
+                    {
+                        "name": "GetCurrentProcessId", 
+                        "address": "0x40a088"
+                    }, 
+                    {
+                        "name": "GetTickCount", 
+                        "address": "0x40a08c"
+                    }, 
+                    {
+                        "name": "GlobalAlloc", 
+                        "address": "0x40a090"
+                    }, 
+                    {
+                        "name": "HeapCreate", 
+                        "address": "0x40a094"
+                    }, 
+                    {
+                        "name": "GetProcessHeap", 
+                        "address": "0x40a098"
+                    }, 
+                    {
+                        "name": "GetCurrentProcess", 
+                        "address": "0x40a09c"
+                    }, 
+                    {
+                        "name": "HeapAlloc", 
+                        "address": "0x40a0a0"
+                    }, 
+                    {
+                        "name": "QueryPerformanceCounter", 
+                        "address": "0x40a0a4"
+                    }, 
+                    {
+                        "name": "InterlockedDecrement", 
+                        "address": "0x40a0a8"
+                    }, 
+                    {
+                        "name": "GetCurrentThreadId", 
+                        "address": "0x40a0ac"
+                    }, 
+                    {
+                        "name": "SetLastError", 
+                        "address": "0x40a0b0"
+                    }, 
+                    {
+                        "name": "InterlockedIncrement", 
+                        "address": "0x40a0b4"
+                    }, 
+                    {
+                        "name": "TlsFree", 
+                        "address": "0x40a0b8"
+                    }, 
+                    {
+                        "name": "TlsSetValue", 
+                        "address": "0x40a0bc"
+                    }, 
+                    {
+                        "name": "TlsGetValue", 
+                        "address": "0x40a0c0"
+                    }, 
+                    {
+                        "name": "GetCommandLineA", 
+                        "address": "0x40a0c4"
+                    }, 
+                    {
+                        "name": "HeapSetInformation", 
+                        "address": "0x40a0c8"
+                    }, 
+                    {
+                        "name": "GetStartupInfoW", 
+                        "address": "0x40a0cc"
+                    }, 
+                    {
+                        "name": "DecodePointer", 
+                        "address": "0x40a0d0"
+                    }, 
+                    {
+                        "name": "UnhandledExceptionFilter", 
+                        "address": "0x40a0d4"
+                    }, 
+                    {
+                        "name": "SetUnhandledExceptionFilter", 
+                        "address": "0x40a0d8"
+                    }, 
+                    {
+                        "name": "IsDebuggerPresent", 
+                        "address": "0x40a0dc"
+                    }, 
+                    {
+                        "name": "EncodePointer", 
+                        "address": "0x40a0e0"
+                    }, 
+                    {
+                        "name": "TerminateProcess", 
+                        "address": "0x40a0e4"
+                    }, 
+                    {
+                        "name": "GetProcAddress", 
+                        "address": "0x40a0e8"
+                    }, 
+                    {
+                        "name": "GetModuleHandleW", 
+                        "address": "0x40a0ec"
+                    }, 
+                    {
+                        "name": "ExitProcess", 
+                        "address": "0x40a0f0"
+                    }, 
+                    {
+                        "name": "WriteFile", 
+                        "address": "0x40a0f4"
+                    }, 
+                    {
+                        "name": "GetStdHandle", 
+                        "address": "0x40a0f8"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameW", 
+                        "address": "0x40a0fc"
+                    }, 
+                    {
+                        "name": "EnterCriticalSection", 
+                        "address": "0x40a100"
+                    }, 
+                    {
+                        "name": "LeaveCriticalSection", 
+                        "address": "0x40a104"
+                    }, 
+                    {
+                        "name": "HeapFree", 
+                        "address": "0x40a108"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameA", 
+                        "address": "0x40a10c"
+                    }, 
+                    {
+                        "name": "FreeEnvironmentStringsW", 
+                        "address": "0x40a110"
+                    }, 
+                    {
+                        "name": "WideCharToMultiByte", 
+                        "address": "0x40a114"
+                    }, 
+                    {
+                        "name": "GetEnvironmentStringsW", 
+                        "address": "0x40a118"
+                    }, 
+                    {
+                        "name": "SetHandleCount", 
+                        "address": "0x40a11c"
+                    }, 
+                    {
+                        "name": "InitializeCriticalSectionAndSpinCount", 
+                        "address": "0x40a120"
+                    }, 
+                    {
+                        "name": "GetFileType", 
+                        "address": "0x40a124"
+                    }, 
+                    {
+                        "name": "DeleteCriticalSection", 
+                        "address": "0x40a128"
+                    }, 
+                    {
+                        "name": "TlsAlloc", 
+                        "address": "0x40a12c"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "MoveWindow", 
+                        "address": "0x40a14c"
+                    }, 
+                    {
+                        "name": "GetScrollInfo", 
+                        "address": "0x40a150"
+                    }, 
+                    {
+                        "name": "RegisterClassA", 
+                        "address": "0x40a154"
+                    }, 
+                    {
+                        "name": "GetScrollPos", 
+                        "address": "0x40a158"
+                    }, 
+                    {
+                        "name": "DestroyWindow", 
+                        "address": "0x40a15c"
+                    }, 
+                    {
+                        "name": "GetMessageA", 
+                        "address": "0x40a160"
+                    }, 
+                    {
+                        "name": "RegisterClassExA", 
+                        "address": "0x40a164"
+                    }, 
+                    {
+                        "name": "PostQuitMessage", 
+                        "address": "0x40a168"
+                    }, 
+                    {
+                        "name": "SetCapture", 
+                        "address": "0x40a16c"
+                    }, 
+                    {
+                        "name": "LoadMenuA", 
+                        "address": "0x40a170"
+                    }, 
+                    {
+                        "name": "LoadIconA", 
+                        "address": "0x40a174"
+                    }, 
+                    {
+                        "name": "GetClientRect", 
+                        "address": "0x40a178"
+                    }, 
+                    {
+                        "name": "GetDC", 
+                        "address": "0x40a17c"
+                    }, 
+                    {
+                        "name": "SetScrollInfo", 
+                        "address": "0x40a180"
+                    }, 
+                    {
+                        "name": "ChildWindowFromPoint", 
+                        "address": "0x40a184"
+                    }, 
+                    {
+                        "name": "TranslateMessage", 
+                        "address": "0x40a188"
+                    }, 
+                    {
+                        "name": "MessageBoxA", 
+                        "address": "0x40a18c"
+                    }, 
+                    {
+                        "name": "InvalidateRect", 
+                        "address": "0x40a190"
+                    }, 
+                    {
+                        "name": "CreateWindowExA", 
+                        "address": "0x40a194"
+                    }, 
+                    {
+                        "name": "ScrollWindow", 
+                        "address": "0x40a198"
+                    }, 
+                    {
+                        "name": "GetDesktopWindow", 
+                        "address": "0x40a19c"
+                    }, 
+                    {
+                        "name": "ShowWindow", 
+                        "address": "0x40a1a0"
+                    }, 
+                    {
+                        "name": "WindowFromDC", 
+                        "address": "0x40a1a4"
+                    }, 
+                    {
+                        "name": "IsWindow", 
+                        "address": "0x40a1a8"
+                    }, 
+                    {
+                        "name": "DispatchMessageA", 
+                        "address": "0x40a1ac"
+                    }, 
+                    {
+                        "name": "CloseWindow", 
+                        "address": "0x40a1b0"
+                    }, 
+                    {
+                        "name": "LoadCursorA", 
+                        "address": "0x40a1b4"
+                    }, 
+                    {
+                        "name": "DialogBoxParamA", 
+                        "address": "0x40a1b8"
+                    }
+                ], 
+                "dll": "USER32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "SetBkMode", 
+                        "address": "0x40a008"
+                    }, 
+                    {
+                        "name": "DeleteObject", 
+                        "address": "0x40a00c"
+                    }, 
+                    {
+                        "name": "SelectObject", 
+                        "address": "0x40a010"
+                    }, 
+                    {
+                        "name": "CreateCompatibleDC", 
+                        "address": "0x40a014"
+                    }, 
+                    {
+                        "name": "BitBlt", 
+                        "address": "0x40a018"
+                    }
+                ], 
+                "dll": "GDI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "ClosePrinter", 
+                        "address": "0x40a1c0"
+                    }
+                ], 
+                "dll": "WINSPOOL.DRV"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "PrintDlgA", 
+                        "address": "0x40a000"
+                    }
+                ], 
+                "dll": "COMDLG32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": null, 
+                        "address": "0x40a144"
+                    }
+                ], 
+                "dll": "OLEAUT32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": null, 
+                        "address": "0x40a1c8"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x40a1cc"
+                    }
+                ], 
+                "dll": "WS2_32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "WNetGetUniversalNameA", 
+                        "address": "0x40a134"
+                    }, 
+                    {
+                        "name": "WNetEnumResourceA", 
+                        "address": "0x40a138"
+                    }, 
+                    {
+                        "name": "WNetCloseEnum", 
+                        "address": "0x40a13c"
+                    }
+                ], 
+                "dll": "MPR.dll"
+            }
+        ], 
+        "peid_signatures": null, 
+        "pe_exports": [], 
+        "imported_dll_count": 8, 
+        "pe_resources": [], 
+        "pe_versioninfo": [
+            {
+                "name": "LegalCopyright", 
+                "value": "Copyright (C) 1995-2012 FinalWire Ltd."
+            }, 
+            {
+                "name": "InternalName", 
+                "value": "AIDA64"
+            }, 
+            {
+                "name": "FileVersion", 
+                "value": "2.70"
+            }, 
+            {
+                "name": "CompanyName", 
+                "value": "FinalWire Ltd."
+            }, 
+            {
+                "name": "ProductName", 
+                "value": "AIDA64 Benchmark Module"
+            }, 
+            {
+                "name": "ProductVersion", 
+                "value": "2.70"
+            }, 
+            {
+                "name": "FileDescription", 
+                "value": "AIDA64 Benchmark Module"
+            }, 
+            {
+                "name": "OriginalFilename", 
+                "value": "aida_bench32.dll"
+            }, 
+            {
+                "name": "Translation", 
+                "value": "0x0409 0x04e4"
+            }
+        ], 
+        "pe_sections": [
+            {
+                "size_of_data": "0x8e00", 
+                "virtual_address": "0x1000", 
+                "entropy": 6.485116262220562, 
+                "name": ".text\\x00\\x00\\x00", 
+                "virtual_size": "0x8ddc"
+            }, 
+            {
+                "size_of_data": "0x3200", 
+                "virtual_address": "0xa000", 
+                "entropy": 4.999348632524354, 
+                "name": ".rdata\\x00\\x00", 
+                "virtual_size": "0x319e"
+            }, 
+            {
+                "size_of_data": "0x39400", 
+                "virtual_address": "0xe000", 
+                "entropy": 7.808438119061147, 
+                "name": ".data\\x00\\x00\\x00", 
+                "virtual_size": "0x3c268"
+            }, 
+            {
+                "size_of_data": "0x600", 
+                "virtual_address": "0x4b000", 
+                "entropy": 4.525554683498369, 
+                "name": ".rsrc\\x00\\x00\\x00", 
+                "virtual_size": "0x50c"
+            }
+        ]
+    }, 
+    "dropped": [], 
+    "file": {
+        "size": 286208, 
+        "sha1": "efaecf3b4cf29f53cbc7c5bd9b131ae465b057dd", 
+        "name": "47205b55717facf923434c3f69747c7b", 
+        "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit", 
+        "crc32": "9EC5F838", 
+        "ssdeep": null, 
+        "sha256": "de8de52c7744f59ab9505ef0fbba04f17349ec835602fe05e072df51d0c26cab", 
+        "sha512": "38d3548792bae2b1593f32b672e01f7d94167ca8176f05e921c76048cdb7ce098b50a1ed46963aa06dba7da0954f3f45c80671dbd73ac0b6b0f98fc8530d24cb", 
+        "md5": "47205b55717facf923434c3f69747c7b"
+    }, 
+    "debug": {
+        "log": "2012-08-19 12:12:51,135 [root] INFO: No analysis package specified, trying to detect it automagically\r\n2012-08-19 12:12:51,155 [lib.api.process] INFO: Successfully executed process from path \"C:\\47205b55717facf923434c3f69747c7b\" with arguments \"None\" with pid 1076\r\n2012-08-19 12:12:53,168 [lib.api.process] INFO: Using QueueUserAPC injection\r\n2012-08-19 12:12:53,168 [lib.api.process] INFO: Successfully injected process with pid 1076\r\n2012-08-19 12:12:55,171 [lib.api.process] INFO: Successfully resumed process with pid 1076\r\n2012-08-19 12:12:55,171 [root] INFO: Added new process to list with pid: 1076\r\n2012-08-19 12:12:56,183 [root] INFO: Process with pid 1076 has terminated\r\n2012-08-19 12:12:57,184 [root] INFO: Analysis completed\r\n"
+    }, 
+    "network": {
+        "http": [], 
+        "udp": [
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }
+        ], 
+        "hosts": [
+            "192.168.56.101", 
+            "192.168.56.1", 
+            "239.255.255.250", 
+            "224.0.0.22", 
+            "192.168.56.255"
+        ], 
+        "dns": [], 
+        "tcp": []
+    }
+}

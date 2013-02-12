@@ -1,0 +1,2323 @@
+{
+    "info": {
+        "started": "2012-08-19 20:50:15", 
+        "ended": "2012-08-19 20:53:02", 
+        "duration": "166 seconds", 
+        "version": "0.4-dev"
+    }, 
+    "yara": [], 
+    "signatures": [], 
+    "behavior": {
+        "processes": [
+            {
+                "parent_id": "1012", 
+                "process_name": "72ec521b7d7fa9b3181ec711fd8b5775", 
+                "process_id": "1076", 
+                "first_seen": "20120819125047.983", 
+                "calls": [
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00d70000", 
+                        "timestamp": "20120819125047.983", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00000000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "33554432"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00002000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000001"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "SUCCESS", 
+                        "return": "0x00d70000", 
+                        "timestamp": "20120819125047.983", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1076"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00d70000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "65536"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00001000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000004"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "synchronization", 
+                        "status": "SUCCESS", 
+                        "return": "0x00000080", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "OpenMutexW", 
+                        "arguments": [
+                            {
+                                "name": "dwDesiredAccess", 
+                                "value": "0x00120001"
+                            }, 
+                            {
+                                "name": "lpName", 
+                                "value": "ShimCacheMutex"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "RegQueryValueExW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000008c"
+                            }, 
+                            {
+                                "name": "lpValueName", 
+                                "value": "Cache"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "advapi32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "SUCCESS", 
+                        "return": "1172", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "CreateProcessW", 
+                        "arguments": [
+                            {
+                                "name": "lpApplicationName", 
+                                "value": "C:\\72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpCommandLine", 
+                                "value": "(null)"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1172"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "20480"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00003000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "SUCCESS", 
+                        "return": "0x0012ed1c", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "RegOpenKeyW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "HKEY_LOCAL_MACHINE"
+                            }, 
+                            {
+                                "name": "lpSubKey", 
+                                "value": "Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "registry", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "RegOpenKeyW", 
+                        "arguments": [
+                            {
+                                "name": "hKey", 
+                                "value": "0x0000009c"
+                            }, 
+                            {
+                                "name": "lpSubKey", 
+                                "value": "Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "system", 
+                        "status": "SUCCESS", 
+                        "return": "0x77dd0000", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "LoadLibraryA", 
+                        "arguments": [
+                            {
+                                "name": "lpFileName", 
+                                "value": "advapi32.dll"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "SUCCESS", 
+                        "return": "1208", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "CreateProcessW", 
+                        "arguments": [
+                            {
+                                "name": "lpApplicationName", 
+                                "value": "C:\\72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpCommandLine", 
+                                "value": "(null)"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "memory", 
+                        "status": "FAILURE", 
+                        "return": "", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "VirtualAllocEx", 
+                        "arguments": [
+                            {
+                                "name": "th32ProcessID", 
+                                "value": "1208"
+                            }, 
+                            {
+                                "name": "szExeFile", 
+                                "value": "72ec521b7d7fa9b3181ec711fd8b5775"
+                            }, 
+                            {
+                                "name": "lpAddress", 
+                                "value": "0x00400000"
+                            }, 
+                            {
+                                "name": "dwSize", 
+                                "value": "331776"
+                            }, 
+                            {
+                                "name": "flAllocationType", 
+                                "value": "0x00003000"
+                            }, 
+                            {
+                                "name": "flProtect", 
+                                "value": "0x00000040"
+                            }
+                        ]
+                    }, 
+                    {
+                        "category": "process", 
+                        "status": "", 
+                        "return": "", 
+                        "timestamp": "20120819125049.916", 
+                        "repeated": 0, 
+                        "api": "ExitProcess", 
+                        "arguments": [
+                            {
+                                "name": "uExitCode", 
+                                "value": "0x00000000"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ], 
+        "processtree": [
+            {
+                "pid": 1076, 
+                "name": "72ec521b7d7fa9b3181ec711fd8b5775", 
+                "children": []
+            }
+        ], 
+        "summary": {
+            "files": [], 
+            "keys": [
+                "HKEY_LOCAL_MACHINE\\\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers", 
+                "0x0000009c\\\\Software\\Policies\\Microsoft\\Windows\\Safer\\CodeIdentifiers"
+            ], 
+            "mutexes": [
+                "ShimCacheMutex"
+            ]
+        }
+    }, 
+    "virustotal": {
+        "scan_id": "833f040b05dd9999b78daeec5f9adecba67f5cc1059f8025ca92e152963cf5d8-1344683951", 
+        "sha1": "5dd1011982bce6483e026734490d9c0767de9f6a", 
+        "resource": "72ec521b7d7fa9b3181ec711fd8b5775", 
+        "response_code": 1, 
+        "scan_date": "2012-08-11 11:19:11", 
+        "permalink": "https://www.virustotal.com/file/833f040b05dd9999b78daeec5f9adecba67f5cc1059f8025ca92e152963cf5d8/analysis/1344683951/", 
+        "verbose_msg": "Scan finished, scan information embedded in this object", 
+        "sha256": "833f040b05dd9999b78daeec5f9adecba67f5cc1059f8025ca92e152963cf5d8", 
+        "positives": 15, 
+        "total": 30, 
+        "md5": "72ec521b7d7fa9b3181ec711fd8b5775", 
+        "scans": {
+            "CAT-QuickHeal": {
+                "detected": false, 
+                "version": "12.00", 
+                "result": null, 
+                "update": "20120811"
+            }, 
+            "McAfee": {
+                "detected": true, 
+                "version": "5.400.0.1158", 
+                "result": "Artemis!72EC521B7D7F", 
+                "update": "20120811"
+            }, 
+            "TheHacker": {
+                "detected": false, 
+                "version": "None", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "K7AntiVirus": {
+                "detected": true, 
+                "version": "9.146.7474", 
+                "result": "Trojan", 
+                "update": "20120810"
+            }, 
+            "VirusBuster": {
+                "detected": false, 
+                "version": "15.0.141.0", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "F-Prot": {
+                "detected": false, 
+                "version": "4.6.5.141", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "Symantec": {
+                "detected": true, 
+                "version": "20121.1.0.298", 
+                "result": "Trojan.Gen.2", 
+                "update": "20120811"
+            }, 
+            "Norman": {
+                "detected": true, 
+                "version": "6.08.06", 
+                "result": "W32/Troj_Generic.DFEVT", 
+                "update": "20120811"
+            }, 
+            "TotalDefense": {
+                "detected": false, 
+                "version": "37.0.10025", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "TrendMicro-HouseCall": {
+                "detected": true, 
+                "version": "9.500.0.1008", 
+                "result": "TROJ_GEN.RCBC8H7", 
+                "update": "20120811"
+            }, 
+            "Avast": {
+                "detected": true, 
+                "version": "6.0.1289.0", 
+                "result": "Win32:Dropper-gen [Drp]", 
+                "update": "20120811"
+            }, 
+            "ClamAV": {
+                "detected": false, 
+                "version": "0.97.3.0", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "ByteHero": {
+                "detected": false, 
+                "version": "1.0.0.1", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "DrWeb": {
+                "detected": true, 
+                "version": "7.0.3.07130", 
+                "result": "Tool.BtcMine.30", 
+                "update": "20120811"
+            }, 
+            "VIPRE": {
+                "detected": true, 
+                "version": "12590", 
+                "result": "Trojan.Win32.Generic!BT", 
+                "update": "20120811"
+            }, 
+            "AntiVir": {
+                "detected": true, 
+                "version": "7.11.39.138", 
+                "result": "TR/Strictor.5287", 
+                "update": "20120811"
+            }, 
+            "TrendMicro": {
+                "detected": true, 
+                "version": "9.561.0.1027", 
+                "result": "TROJ_GEN.RCBC8H7", 
+                "update": "20120811"
+            }, 
+            "McAfee-GW-Edition": {
+                "detected": true, 
+                "version": "2012.1", 
+                "result": "Heuristic.LooksLike.Win32.Suspicious.B", 
+                "update": "20120811"
+            }, 
+            "Jiangmin": {
+                "detected": true, 
+                "version": "13.0.900", 
+                "result": "TrojanDropper.Dapato.mun", 
+                "update": "20120811"
+            }, 
+            "Antiy-AVL": {
+                "detected": false, 
+                "version": "2.0.3.7", 
+                "result": null, 
+                "update": "20120811"
+            }, 
+            "SUPERAntiSpyware": {
+                "detected": false, 
+                "version": "4.40.0.1006", 
+                "result": null, 
+                "update": "20120811"
+            }, 
+            "AhnLab-V3": {
+                "detected": false, 
+                "version": "2012.08.11.00", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "Commtouch": {
+                "detected": false, 
+                "version": "5.3.2.6", 
+                "result": null, 
+                "update": "20120811"
+            }, 
+            "ESET-NOD32": {
+                "detected": false, 
+                "version": "7376", 
+                "result": null, 
+                "update": "20120811"
+            }, 
+            "VBA32": {
+                "detected": false, 
+                "version": "3.12.18.2", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "Rising": {
+                "detected": false, 
+                "version": "24.22.04.02", 
+                "result": null, 
+                "update": "20120810"
+            }, 
+            "Ikarus": {
+                "detected": true, 
+                "version": "T3.1.1.122.0", 
+                "result": "Trojan-Dropper.Win32.Dapato", 
+                "update": "20120811"
+            }, 
+            "Fortinet": {
+                "detected": true, 
+                "version": "4.3.398.0", 
+                "result": "W32/Dapato.BNWM!tr", 
+                "update": "20120811"
+            }, 
+            "AVG": {
+                "detected": true, 
+                "version": "10.0.0.1190", 
+                "result": "SHeur4.AKPM", 
+                "update": "20120811"
+            }, 
+            "Panda": {
+                "detected": false, 
+                "version": "10.0.3.5", 
+                "result": null, 
+                "update": "20120811"
+            }
+        }
+    }, 
+    "static": {
+        "pe_imports": [
+            {
+                "imports": [
+                    {
+                        "name": "GetCurrentProcess", 
+                        "address": "0x46418c"
+                    }, 
+                    {
+                        "name": "GetProcessTimes", 
+                        "address": "0x464190"
+                    }, 
+                    {
+                        "name": "GetTickCount", 
+                        "address": "0x464194"
+                    }, 
+                    {
+                        "name": "Sleep", 
+                        "address": "0x464198"
+                    }, 
+                    {
+                        "name": "GetModuleHandleA", 
+                        "address": "0x46419c"
+                    }, 
+                    {
+                        "name": "GetProcAddress", 
+                        "address": "0x4641a0"
+                    }, 
+                    {
+                        "name": "GetEnvironmentVariableW", 
+                        "address": "0x4641a4"
+                    }, 
+                    {
+                        "name": "lstrcatW", 
+                        "address": "0x4641a8"
+                    }, 
+                    {
+                        "name": "WaitForSingleObject", 
+                        "address": "0x4641ac"
+                    }, 
+                    {
+                        "name": "FindResourceA", 
+                        "address": "0x4641b0"
+                    }, 
+                    {
+                        "name": "LoadResource", 
+                        "address": "0x4641b4"
+                    }, 
+                    {
+                        "name": "LockResource", 
+                        "address": "0x4641b8"
+                    }, 
+                    {
+                        "name": "GetComputerNameA", 
+                        "address": "0x4641bc"
+                    }, 
+                    {
+                        "name": "GlobalAlloc", 
+                        "address": "0x4641c0"
+                    }, 
+                    {
+                        "name": "GlobalFree", 
+                        "address": "0x4641c4"
+                    }, 
+                    {
+                        "name": "LocalAlloc", 
+                        "address": "0x4641c8"
+                    }, 
+                    {
+                        "name": "LocalLock", 
+                        "address": "0x4641cc"
+                    }, 
+                    {
+                        "name": "LocalUnlock", 
+                        "address": "0x4641d0"
+                    }, 
+                    {
+                        "name": "LocalFree", 
+                        "address": "0x4641d4"
+                    }, 
+                    {
+                        "name": "RtlUnwind", 
+                        "address": "0x4641d8"
+                    }, 
+                    {
+                        "name": "GetStartupInfoW", 
+                        "address": "0x4641dc"
+                    }, 
+                    {
+                        "name": "GetModuleHandleW", 
+                        "address": "0x4641e0"
+                    }, 
+                    {
+                        "name": "VirtualAlloc", 
+                        "address": "0x4641e4"
+                    }, 
+                    {
+                        "name": "VirtualQuery", 
+                        "address": "0x4641e8"
+                    }, 
+                    {
+                        "name": "HeapCreate", 
+                        "address": "0x4641ec"
+                    }, 
+                    {
+                        "name": "HeapDestroy", 
+                        "address": "0x4641f0"
+                    }, 
+                    {
+                        "name": "HeapAlloc", 
+                        "address": "0x4641f4"
+                    }, 
+                    {
+                        "name": "HeapReAlloc", 
+                        "address": "0x4641f8"
+                    }, 
+                    {
+                        "name": "HeapFree", 
+                        "address": "0x4641fc"
+                    }, 
+                    {
+                        "name": "HeapSize", 
+                        "address": "0x464200"
+                    }, 
+                    {
+                        "name": "HeapValidate", 
+                        "address": "0x464204"
+                    }, 
+                    {
+                        "name": "ExitProcess", 
+                        "address": "0x464208"
+                    }, 
+                    {
+                        "name": "GetSystemTimeAsFileTime", 
+                        "address": "0x46420c"
+                    }, 
+                    {
+                        "name": "GetStartupInfoA", 
+                        "address": "0x464210"
+                    }, 
+                    {
+                        "name": "GetFileType", 
+                        "address": "0x464214"
+                    }, 
+                    {
+                        "name": "GetStdHandle", 
+                        "address": "0x464218"
+                    }, 
+                    {
+                        "name": "DuplicateHandle", 
+                        "address": "0x46421c"
+                    }, 
+                    {
+                        "name": "SetHandleCount", 
+                        "address": "0x464220"
+                    }, 
+                    {
+                        "name": "GetCommandLineW", 
+                        "address": "0x464224"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameW", 
+                        "address": "0x464228"
+                    }, 
+                    {
+                        "name": "GetEnvironmentStringsW", 
+                        "address": "0x46422c"
+                    }, 
+                    {
+                        "name": "FreeEnvironmentStringsW", 
+                        "address": "0x464230"
+                    }, 
+                    {
+                        "name": "UnhandledExceptionFilter", 
+                        "address": "0x464234"
+                    }, 
+                    {
+                        "name": "ReadFile", 
+                        "address": "0x464238"
+                    }, 
+                    {
+                        "name": "GetConsoleMode", 
+                        "address": "0x46423c"
+                    }, 
+                    {
+                        "name": "GetConsoleCP", 
+                        "address": "0x464240"
+                    }, 
+                    {
+                        "name": "GetLastError", 
+                        "address": "0x464244"
+                    }, 
+                    {
+                        "name": "SetConsoleCtrlHandler", 
+                        "address": "0x464248"
+                    }, 
+                    {
+                        "name": "GetConsoleOutputCP", 
+                        "address": "0x46424c"
+                    }, 
+                    {
+                        "name": "WriteFile", 
+                        "address": "0x464250"
+                    }, 
+                    {
+                        "name": "MultiByteToWideChar", 
+                        "address": "0x464254"
+                    }, 
+                    {
+                        "name": "SetStdHandle", 
+                        "address": "0x464258"
+                    }, 
+                    {
+                        "name": "SetFilePointer", 
+                        "address": "0x46425c"
+                    }, 
+                    {
+                        "name": "WideCharToMultiByte", 
+                        "address": "0x464260"
+                    }, 
+                    {
+                        "name": "CloseHandle", 
+                        "address": "0x464264"
+                    }, 
+                    {
+                        "name": "DeleteFileA", 
+                        "address": "0x464268"
+                    }, 
+                    {
+                        "name": "SetLastError", 
+                        "address": "0x46426c"
+                    }, 
+                    {
+                        "name": "RaiseException", 
+                        "address": "0x464270"
+                    }, 
+                    {
+                        "name": "SetUnhandledExceptionFilter", 
+                        "address": "0x464274"
+                    }, 
+                    {
+                        "name": "GetModuleFileNameA", 
+                        "address": "0x464278"
+                    }, 
+                    {
+                        "name": "FormatMessageA", 
+                        "address": "0x46427c"
+                    }
+                ], 
+                "dll": "KERNEL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "GetClientRect", 
+                        "address": "0x464284"
+                    }, 
+                    {
+                        "name": "GetDC", 
+                        "address": "0x464288"
+                    }, 
+                    {
+                        "name": "MoveWindow", 
+                        "address": "0x46428c"
+                    }, 
+                    {
+                        "name": "SetWindowTextA", 
+                        "address": "0x464290"
+                    }, 
+                    {
+                        "name": "ReleaseDC", 
+                        "address": "0x464294"
+                    }, 
+                    {
+                        "name": "ShowWindow", 
+                        "address": "0x464298"
+                    }, 
+                    {
+                        "name": "GetParent", 
+                        "address": "0x46429c"
+                    }, 
+                    {
+                        "name": "BeginPaint", 
+                        "address": "0x4642a0"
+                    }, 
+                    {
+                        "name": "EndPaint", 
+                        "address": "0x4642a4"
+                    }, 
+                    {
+                        "name": "InvalidateRect", 
+                        "address": "0x4642a8"
+                    }, 
+                    {
+                        "name": "UpdateWindow", 
+                        "address": "0x4642ac"
+                    }, 
+                    {
+                        "name": "GetAsyncKeyState", 
+                        "address": "0x4642b0"
+                    }, 
+                    {
+                        "name": "DefWindowProcA", 
+                        "address": "0x4642b4"
+                    }, 
+                    {
+                        "name": "FillRect", 
+                        "address": "0x4642b8"
+                    }, 
+                    {
+                        "name": "CreateWindowExA", 
+                        "address": "0x4642bc"
+                    }, 
+                    {
+                        "name": "SendMessageA", 
+                        "address": "0x4642c0"
+                    }, 
+                    {
+                        "name": "PostQuitMessage", 
+                        "address": "0x4642c4"
+                    }, 
+                    {
+                        "name": "GetScrollInfo", 
+                        "address": "0x4642c8"
+                    }, 
+                    {
+                        "name": "SetScrollInfo", 
+                        "address": "0x4642cc"
+                    }, 
+                    {
+                        "name": "ScrollWindowEx", 
+                        "address": "0x4642d0"
+                    }, 
+                    {
+                        "name": "GetDlgItem", 
+                        "address": "0x4642d4"
+                    }, 
+                    {
+                        "name": "SetFocus", 
+                        "address": "0x4642d8"
+                    }, 
+                    {
+                        "name": "MessageBoxA", 
+                        "address": "0x4642dc"
+                    }, 
+                    {
+                        "name": "EndDialog", 
+                        "address": "0x4642e0"
+                    }, 
+                    {
+                        "name": "RegisterHotKey", 
+                        "address": "0x4642e4"
+                    }, 
+                    {
+                        "name": "GetWindowTextLengthA", 
+                        "address": "0x4642e8"
+                    }, 
+                    {
+                        "name": "GetDlgItemTextA", 
+                        "address": "0x4642ec"
+                    }, 
+                    {
+                        "name": "OemToCharA", 
+                        "address": "0x4642f0"
+                    }, 
+                    {
+                        "name": "CharToOemA", 
+                        "address": "0x4642f4"
+                    }
+                ], 
+                "dll": "USER32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "CreateDIBSection", 
+                        "address": "0x4642fc"
+                    }, 
+                    {
+                        "name": "GetObjectA", 
+                        "address": "0x464300"
+                    }, 
+                    {
+                        "name": "GetTextExtentPoint32A", 
+                        "address": "0x464304"
+                    }, 
+                    {
+                        "name": "DeleteObject", 
+                        "address": "0x464308"
+                    }, 
+                    {
+                        "name": "CreateCompatibleDC", 
+                        "address": "0x46430c"
+                    }, 
+                    {
+                        "name": "SelectObject", 
+                        "address": "0x464310"
+                    }, 
+                    {
+                        "name": "BitBlt", 
+                        "address": "0x464314"
+                    }, 
+                    {
+                        "name": "DeleteDC", 
+                        "address": "0x464318"
+                    }, 
+                    {
+                        "name": "GetStockObject", 
+                        "address": "0x46431c"
+                    }, 
+                    {
+                        "name": "CreateSolidBrush", 
+                        "address": "0x464320"
+                    }, 
+                    {
+                        "name": "SetBkMode", 
+                        "address": "0x464324"
+                    }, 
+                    {
+                        "name": "GetDeviceCaps", 
+                        "address": "0x464328"
+                    }
+                ], 
+                "dll": "GDI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": null, 
+                        "address": "0x464330"
+                    }
+                ], 
+                "dll": "COMCTL32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": "GetUserNameA", 
+                        "address": "0x464338"
+                    }
+                ], 
+                "dll": "ADVAPI32.dll"
+            }, 
+            {
+                "imports": [
+                    {
+                        "name": null, 
+                        "address": "0x464340"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x464344"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x464348"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x46434c"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x464350"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x464354"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x464358"
+                    }, 
+                    {
+                        "name": null, 
+                        "address": "0x46435c"
+                    }
+                ], 
+                "dll": "ODBC32.dll"
+            }
+        ], 
+        "peid_signatures": [
+            "Pelles C 3.00, 4.00, 4.50 EXE (X86 CRT-LIB)"
+        ], 
+        "pe_exports": [], 
+        "imported_dll_count": 6, 
+        "pe_resources": [], 
+        "pe_versioninfo": [
+            {
+                "name": "LegalCopyright", 
+                "value": "\\xa9 Microsoft Corporation. All rights reserved."
+            }, 
+            {
+                "name": "InternalName", 
+                "value": "Virtual PC.exe"
+            }, 
+            {
+                "name": "FileVersion", 
+                "value": "6.0.156.0"
+            }, 
+            {
+                "name": "CompanyName", 
+                "value": "Microsoft Corporation"
+            }, 
+            {
+                "name": "ProductName", 
+                "value": "Microsoft Virtual PC 2007"
+            }, 
+            {
+                "name": "ProductVersion", 
+                "value": "6.0.156.0"
+            }, 
+            {
+                "name": "FileDescription", 
+                "value": "Virtual PC 2007"
+            }, 
+            {
+                "name": "OriginalFilename", 
+                "value": "Virtual PC"
+            }, 
+            {
+                "name": "Translation", 
+                "value": "0x0409 0x04b0"
+            }
+        ], 
+        "pe_sections": [
+            {
+                "size_of_data": "0xc400", 
+                "virtual_address": "0x1000", 
+                "entropy": 6.588962146222951, 
+                "name": ".text\\x00\\x00\\x00", 
+                "virtual_size": "0xc3d0"
+            }, 
+            {
+                "size_of_data": "0x4000", 
+                "virtual_address": "0xe000", 
+                "entropy": 7.52779546678332, 
+                "name": ".rdata\\x00\\x00", 
+                "virtual_size": "0x4000"
+            }, 
+            {
+                "size_of_data": "0x52c00", 
+                "virtual_address": "0x12000", 
+                "entropy": 7.98329646741479, 
+                "name": ".data\\x00\\x00\\x00", 
+                "virtual_size": "0x5345c"
+            }, 
+            {
+                "size_of_data": "0xa00", 
+                "virtual_address": "0x66000", 
+                "entropy": 3.2195355091616538, 
+                "name": ".rsrc\\x00\\x00\\x00", 
+                "virtual_size": "0x87c"
+            }
+        ]
+    }, 
+    "dropped": [], 
+    "file": {
+        "size": 409088, 
+        "sha1": "5dd1011982bce6483e026734490d9c0767de9f6a", 
+        "name": "72ec521b7d7fa9b3181ec711fd8b5775", 
+        "type": "PE32 executable for MS Windows (GUI) Intel 80386 32-bit", 
+        "crc32": "028601CA", 
+        "ssdeep": null, 
+        "sha256": "833f040b05dd9999b78daeec5f9adecba67f5cc1059f8025ca92e152963cf5d8", 
+        "sha512": "6af2c5268acd1e4508fef87d01c410153f37643b1e518e2f0ea42c6ec2c268c6ed56a865a05e7e39eb6870c4b4581575f18a0aabdf103ac3b35c8a9d15fcad53", 
+        "md5": "72ec521b7d7fa9b3181ec711fd8b5775"
+    }, 
+    "debug": {
+        "log": "2012-08-19 14:50:43,927 [root] INFO: No analysis package specified, trying to detect it automagically\r\n2012-08-19 14:50:43,947 [lib.api.process] INFO: Successfully executed process from path \"C:\\72ec521b7d7fa9b3181ec711fd8b5775\" with arguments \"None\" with pid 1076\r\n2012-08-19 14:50:45,960 [lib.api.process] INFO: Using QueueUserAPC injection\r\n2012-08-19 14:50:45,960 [lib.api.process] INFO: Successfully injected process with pid 1076\r\n2012-08-19 14:50:47,963 [lib.api.process] INFO: Successfully resumed process with pid 1076\r\n2012-08-19 14:50:47,963 [root] INFO: Added new process to list with pid: 1076\r\n2012-08-19 14:50:49,915 [root] INFO: Added new process to list with pid: 1172\r\n2012-08-19 14:50:49,915 [root] INFO: Added new process to list with pid: 1208\r\n2012-08-19 14:50:49,966 [root] INFO: Process with pid 1076 has terminated\r\n2012-08-19 14:50:51,918 [lib.api.process] INFO: Using CreateRemoteThread injection\r\n2012-08-19 14:50:51,918 [lib.api.process] INFO: Successfully injected process with pid 1172\r\n2012-08-19 14:50:51,928 [lib.api.process] INFO: Using CreateRemoteThread injection\r\n2012-08-19 14:50:51,928 [lib.api.process] INFO: Successfully injected process with pid 1208\r\n2012-08-19 14:52:44,140 [root] INFO: Analysis completed\r\n"
+    }, 
+    "network": {
+        "http": [], 
+        "udp": [
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1042
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 1900, 
+                "src": "192.168.56.101", 
+                "dst": "239.255.255.250", 
+                "sport": 1046
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 138, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 138
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.255", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 53, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 1025
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }, 
+            {
+                "dport": 137, 
+                "src": "192.168.56.101", 
+                "dst": "192.168.56.1", 
+                "sport": 137
+            }
+        ], 
+        "hosts": [
+            "192.168.56.101", 
+            "192.168.56.1", 
+            "239.255.255.250", 
+            "224.0.0.22", 
+            "192.168.56.255"
+        ], 
+        "dns": [], 
+        "tcp": []
+    }
+}
